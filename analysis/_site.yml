@@ -1,0 +1,17 @@
+name: "paed-BAL-meth-ref"
+output_dir: ../docs
+navbar:
+  title: "paed-BAL-meth-ref"
+  left:
+  - text: Home
+    href: index.html
+  - text: About
+    href: about.html
+  - text: License
+    href: license.html
+output:
+  workflowr::wflow_html:
+    toc: yes
+    toc_float: yes
+    theme: cosmo
+    highlight: textmate
