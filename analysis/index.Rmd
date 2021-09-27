@@ -4,8 +4,38 @@ site: workflowr::wflow_site
 output:
   workflowr::wflow_html:
     toc: false
-editor_options:
-  chunk_output_type: console
 ---
 
-Welcome to my research website.
+Methylation profiling of paediatric Bronchoalveolar Lavage (BAL)
+================================================================
+
+This site contains the results of the analysis of the paediatric cystic 
+fibrosis (CF) methylation data. Follow the links below to explore the 
+different parts of the analysis. 
+
+
+Analysis details
+----------------
+
+* Data cleaning, processing and processing
+    * [Data pre-processing](dataPreprocess.html): Quality control, normalisation
+      and exploration of the BAL methylation data.
+      
+* Estimating cell type proportions
+    * [Estimate proportions](estimateCellProportions.html): Estimation of cell type
+      proportions in the paediatric samples using the custom BAL methylation
+      reference panel.
+      
+      
+Licenses
+--------
+
+The code in this analysis is covered by the [MIT license][mit] and the written
+content on this website is covered by a [Creative Commons CC-BY][cc] license.
+
+
+Citations
+---------
+
+[mit]: https://choosealicense.com/licenses/mit/ "MIT License"
+[cc]: https://creativecommons.org/licenses/by/4.0/ "CC-BY License"
