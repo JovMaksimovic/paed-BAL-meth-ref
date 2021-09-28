@@ -6,16 +6,41 @@ output:
     toc: false
 ---
 
-Methylation profiling of paediatric Bronchoalveolar Lavage (BAL)
-================================================================
+Methylation profiling of purified cell types from paediatric Bronchoalveolar Lavage (BAL)
+=========================================================================================
 
-This site contains the results of the analysis of the paediatric cystic 
-fibrosis (CF) methylation data. Follow the links below to explore the 
-different parts of the analysis. 
+This site contains the results of the analyses performed to develop a 
+genome-wide DNA methylation reference panel of the clinically-relevant 
+constituent cell types of paediatric BAL. This reference panel can be used
+in conjunction with appropriate reference-based deconvolution methods to adjust 
+for cell composition in epigenome-wide association studies of pulmonary health 
+and disease, particularly in paediatric cohorts.
+
+Follow the links below to view the different parts of the analysis. 
+<!-- For details -->
+<!-- on how to reproduce the complete analysis, please see the  -->
+<!-- [Getting started](gettingStarted.html) page. -->
+
+<!-- Abstract -->
+<!-- -------- -->
+<!-- DNA methylation is one of the most commonly studied epigenetic marks, due to its role in disease and development. Illumina methylation arrays have been extensively used to measure methylation across the human genome. Methylation array analysis has primarily focused on preprocessing, normalisation and identification of differentially methylated CpGs and regions. GOmeth and GOregion are new methods for performing unbiased gene set testing following differential methylation analysis. Benchmarking analyses demonstrate GOmeth outperforms other approaches and GOregion is the first method for gene set testing of differentially methylated regions. -->
 
 
-Analysis details
-----------------
+<!-- Authors -->
+<!-- ------- -->
+<!-- Jovana Maksimovic^1,2,3^, Alicia Oshlack^1,4^, Belinda Phipson^1,2+^ -->
+
+<!-- ^1^ Peter MacCallum Cancer Centre, Melbourne, Victoria, 3000, Australia -->
+<!-- ^2^ Department of Pediatrics, University of Melbourne, Parkville, Victoria,  -->
+<!--     3010, Australia -->
+<!-- ^3^ Murdoch Children’s Research Institute, Parkville, Victoria, 3052, Australia -->
+<!-- ^4^ School of Biosciences, University of Melbourne, Parkville, Victoria, 3010,  -->
+<!--     Australia -->
+
+<!-- ^+^ corresponding author -->
+
+Analysis
+--------
 
 * Data cleaning, processing and processing
     * [Data pre-processing](dataPreprocess.html): Quality control, normalisation
@@ -33,9 +58,21 @@ Licenses
 The code in this analysis is covered by the [MIT license][mit] and the written
 content on this website is covered by a [Creative Commons CC-BY][cc] license.
 
+<!-- Citations -->
+<!-- --------- -->
+<!-- [houseman]:1 -->
+<!-- > Houseman, Eugene Andres, William P. Accomando, Devin C. Koestler,  -->
+<!-- > Brock C. Christensen, Carmen J. Marsit, Heather H. Nelson, John K. Wiencke,  -->
+<!-- > and Karl T. Kelsey. 2012. “DNA Methylation Arrays as Surrogate Measures of  -->
+<!-- > Cell Mixture Distribution.” BMC Bioinformatics 13 (1): 86.  -->
+<!-- > DOI:[10.1186/1471-2105-13-86](https://doi.org/10.1186/1471-2105-13-86) -->
 
-Citations
----------
+<!-- [salas]:2 -->
+<!-- > Salas, Lucas A., Devin C. Koestler, Rondi A. Butler, Helen M. Hansen,  -->
+<!-- > John K. Wiencke, Karl T. Kelsey, and Brock C. Christensen. 2018. “An Optimized  -->
+<!-- > Library for Reference-Based Deconvolution of Whole-Blood Biospecimens Assayed  -->
+<!-- > Using the Illumina HumanMethylationEPIC BeadArray.” Genome Biology 19 (1): 64.  -->
+<!-- > DOI:[10.1186/s13059-018-1448-7](https://doi.org/10.1186/s13059-018-1448-7) -->
 
 [mit]: https://choosealicense.com/licenses/mit/ "MIT License"
 [cc]: https://creativecommons.org/licenses/by/4.0/ "CC-BY License"

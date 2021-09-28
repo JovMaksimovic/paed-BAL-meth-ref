@@ -7,4 +7,9 @@ editor_options:
   chunk_output_type: console
 ---
 
-Describe your project.
+This project has developed a genome-wide DNA methylation reference panel of the 
+clinically-relevant constituent cell types of paediatric Bronchoalveolar Lavage. 
+This reference panel can be used in conjunction with appropriate reference-based 
+deconvolution methods to adjust for cell composition in epigenome-wide 
+association studies of pulmonary health and disease, particularly in paediatric 
+cohorts.
