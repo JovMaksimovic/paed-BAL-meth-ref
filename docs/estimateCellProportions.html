@@ -510,16 +510,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsatlassianpetermacorgaubitbucketscmospaedbalmethreftree2bd43cc6df0685982254d3eb180802a33ee74b19targetblank2bd43cca"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/tree/2bd43cc6df0685982254d3eb180802a33ee74b19" target="_blank">2bd43cc</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsatlassianpetermacorgaubitbucketscmospaedbalmethreftreee968190c85470b191cab0de6adabaa18a60ace5ctargetblanke968190a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/tree/e968190c85470b191cab0de6adabaa18a60ace5c" target="_blank">e968190</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsatlassianpetermacorgaubitbucketscmospaedbalmethreftree2bd43cc6df0685982254d3eb180802a33ee74b19targetblank2bd43cca" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsatlassianpetermacorgaubitbucketscmospaedbalmethreftreee968190c85470b191cab0de6adabaa18a60ace5ctargetblanke968190a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/tree/2bd43cc6df0685982254d3eb180802a33ee74b19" target="_blank">2bd43cc</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/tree/e968190c85470b191cab0de6adabaa18a60ace5c" target="_blank">e968190</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -571,6 +571,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/blob/e968190c85470b191cab0de6adabaa18a60ace5c/analysis/estimateCellProportions.Rmd" target="_blank">e968190</a>
+</td>
+<td>
+Jovana Maksimovic
+</td>
+<td>
+2021-09-28
+</td>
+<td>
+wflow_publish(c(“analysis/dataPreprocess.Rmd”, “analysis/estimateCellProportions.Rmd”))
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/blob/f75f3f51a0ed4fc257ac35a61e4fb600ea7f3165/docs/estimateCellProportions.html" target="_blank">f75f3f5</a>
+</td>
+<td>
+Jovana Maksimovic
+</td>
+<td>
+2021-09-28
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -1277,7 +1311,9 @@ p4 &lt;- ggplot(dat4, aes(x = x, y = y)) +
            label = glue::glue(&quot;Pearson correlation = {round(c4$estimate, 4)}
                                p-value = {signif(c4$p.value, 4)}&quot;))
 
-(p1 | p2) / (p3 | p4)</code></pre>
+(wrap_elements(p1 | p2) / wrap_elements(p3 | p4)) + 
+  plot_annotation(tag_levels = &quot;A&quot;) &amp;
+    theme(plot.tag = element_text(face = &#39;bold&#39;, size = 16))</code></pre>
 <p><img src="figure/estimateCellProportions.Rmd/unnamed-chunk-16-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>
 <button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-16-1">
@@ -1669,7 +1705,7 @@ for(i in 1:length(samps)){
     scale_shape_manual(values = c(1,4)) +
     geom_hline(yintercept = 0, linetype = &quot;dashed&quot;, colour = &quot;red&quot;) +
     labs(x = &quot;Mean&quot;, y = &quot;Difference (Flow - Meth. est.)&quot;,
-         colour = &quot;Cell type&quot;) +
+         colour = &quot;Cell type&quot;, shape = &quot;Measure&quot;) +
     coord_cartesian(ylim = c(-0.5, 0.5), xlim = c(0, 1)) +
     ggtitle({samps[i]}) +
     annotate(&quot;text&quot;, x = 0, y = 0.45, hjust = 0, size = 3,
@@ -1680,7 +1716,7 @@ for(i in 1:length(samps)){
 
 p1 &lt;- wrap_plots(p, ncol = 3, guides = &quot;collect&quot;) +
   plot_annotation(title = &quot;Probe selection: Any&quot;) &amp; 
-  theme(legend.position = &quot;bottom&quot;, legend.box = &quot;vertical&quot;)
+  theme(legend.position = &quot;none&quot;)
 
 for(i in 1:length(samps)){
   dat1 &lt;- filter(dat, sample == samps[i])
@@ -1691,7 +1727,7 @@ for(i in 1:length(samps)){
     scale_shape_manual(values = c(1,4)) +
     geom_hline(yintercept = 0, linetype = &quot;dashed&quot;, colour = &quot;red&quot;) +
     labs(x = &quot;Mean&quot;, y = &quot;Difference (Flow - Meth. est.)&quot;,
-         colour = &quot;Cell type&quot;) +
+         colour = &quot;Cell type&quot;, shape = &quot;Measure&quot;) +
     coord_cartesian(ylim = c(-0.5, 0.5), xlim = c(0, 1)) +
     ggtitle(samps[i]) +
     annotate(&quot;text&quot;, x = 0, y = 0.45, hjust = 0, size = 3,
@@ -1704,8 +1740,10 @@ p2 &lt;- wrap_plots(p, ncol = 3, guides = &quot;collect&quot;) +
   plot_annotation(title = &quot;Probe selection: Both&quot;) &amp; 
   theme(legend.position = &quot;bottom&quot;, legend.box = &quot;vertical&quot;)
 
-wrap_elements(p1) / 
-    wrap_elements(p2)</code></pre>
+(wrap_elements(p1) / wrap_elements(p2)) + 
+  plot_layout(guides = &quot;collect&quot;) + 
+  plot_annotation(tag_levels = &quot;A&quot;) &amp;
+    theme(plot.tag = element_text(face = &#39;bold&#39;, size = 16))</code></pre>
 <p><img src="figure/estimateCellProportions.Rmd/unnamed-chunk-24-1.png" width="768" style="display: block; margin: auto;" /></p>
 <p>
 <button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-24-1">
