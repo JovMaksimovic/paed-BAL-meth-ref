@@ -242,7 +242,7 @@ p1
 
 We can see that the estimates of granulocyte and lymphocute proportions made using our BAL reference panel are highly correlated with the true proportions regardless of how the discrimination probe set is chosen. Although there is evidence of slight overestimation of granulocytes in some samples. For example, mixtures 1, 5, 7, 10, 11 and 12 are dominated by >50% lymphocytes and in those samples the proportion of granulocytes is slightly overestimated. This  discrepancy is likely due to the fact that the mixture samples contain only neutrophils whearas our refernce panel contains all granulocyte types. However, despite this shortcoming, the cell type proportion estimates are still very accurate. This suggests that our BAL reference panel, in combination with the Houseman algorithm, should be able to accurately estimate cell type proportions in our patient BAL samples. 
 
-```{r, fig.width=7, fig.height=6}
+```{r, fig.width=7, fig.height=8}
 dat1 <- tibble(x = rowMeans(cbind(mixSum[,"Neu"], 
                                  mixEstAny$counts[,"Granulocyte"])),
               y = (mixSum[,"Neu"] - mixEstAny$counts[,"Granulocyte"]))
@@ -300,7 +300,9 @@ p4 <- ggplot(dat4, aes(x = x, y = y)) +
            label = glue::glue("Pearson correlation = {round(c4$estimate, 4)}
                                p-value = {signif(c4$p.value, 4)}"))
 
-(p1 | p2) / (p3 | p4)
+(wrap_elements(p1 | p2) / wrap_elements(p3 | p4)) + 
+  plot_annotation(tag_levels = "A") &
+    theme(plot.tag = element_text(face = 'bold', size = 16))
 ```
 
 If we look at MDS plots of the mixture data, as well as of the known cell type proportions, we can see that the primary source of variation is the proportion of neutrophils vs. lymphoctes. This overlaps with the the samples where we are seeing slight over estimation of granulocyte proportions.
@@ -476,7 +478,7 @@ for(i in 1:length(samps)){
     scale_shape_manual(values = c(1,4)) +
     geom_hline(yintercept = 0, linetype = "dashed", colour = "red") +
     labs(x = "Mean", y = "Difference (Flow - Meth. est.)",
-         colour = "Cell type") +
+         colour = "Cell type", shape = "Measure") +
     coord_cartesian(ylim = c(-0.5, 0.5), xlim = c(0, 1)) +
     ggtitle({samps[i]}) +
     annotate("text", x = 0, y = 0.45, hjust = 0, size = 3,
@@ -487,7 +489,7 @@ for(i in 1:length(samps)){
 
 p1 <- wrap_plots(p, ncol = 3, guides = "collect") +
   plot_annotation(title = "Probe selection: Any") & 
-  theme(legend.position = "bottom", legend.box = "vertical")
+  theme(legend.position = "none")
 
 for(i in 1:length(samps)){
   dat1 <- filter(dat, sample == samps[i])
@@ -498,7 +500,7 @@ for(i in 1:length(samps)){
     scale_shape_manual(values = c(1,4)) +
     geom_hline(yintercept = 0, linetype = "dashed", colour = "red") +
     labs(x = "Mean", y = "Difference (Flow - Meth. est.)",
-         colour = "Cell type") +
+         colour = "Cell type", shape = "Measure") +
     coord_cartesian(ylim = c(-0.5, 0.5), xlim = c(0, 1)) +
     ggtitle(samps[i]) +
     annotate("text", x = 0, y = 0.45, hjust = 0, size = 3,
@@ -511,8 +513,10 @@ p2 <- wrap_plots(p, ncol = 3, guides = "collect") +
   plot_annotation(title = "Probe selection: Both") & 
   theme(legend.position = "bottom", legend.box = "vertical")
 
-wrap_elements(p1) / 
-    wrap_elements(p2)
+(wrap_elements(p1) / wrap_elements(p2)) + 
+  plot_layout(guides = "collect") + 
+  plot_annotation(tag_levels = "A") &
+    theme(plot.tag = element_text(face = 'bold', size = 16))
 ```
 
 

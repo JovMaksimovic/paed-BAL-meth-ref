@@ -205,7 +205,7 @@ p1 <- ggplot(dat, aes(x = x, y = y, colour = sample)) +
        x = "Principal component 1", 
        y = "Principal component 2") +
   ggtitle("Cell types") +
-  scale_color_manual(values = pal)
+  scale_color_manual(values = pal[-2])
 
 p1
 ```
@@ -297,7 +297,7 @@ p1 <- ggplot(dat, aes(x = x, y = y, colour = sample)) +
        x = "Principal component 1", 
        y = "Principal component 2") +
   ggtitle("Cell types") +
-  scale_color_manual(values = pal)
+  scale_color_manual(values = pal[-2])
 
 p1
 ```
@@ -328,7 +328,7 @@ for(i in 1:length(p)){
     labs(colour = "Sample type", shape = "Run",
          x = glue("Principal component {dims[[i]][1]} ({round(pcvar[2,dims[[i]][1]]*100,1)}%)"), 
          y = glue("Principal component {dims[[i]][2]} ({round(pcvar[2,dims[[i]][2]]*100,1)}%)")) +
-    scale_color_manual(values = pal) + 
+    scale_color_manual(values = pal[-2]) + 
     theme(legend.direction = "vertical")
   
 }
