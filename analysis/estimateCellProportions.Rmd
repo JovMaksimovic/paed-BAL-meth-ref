@@ -461,8 +461,164 @@ p2 <- ggplot(dat, aes(x = rowMeans(cbind(value, both)),
   ggtitle("Probe selection: Both")
 
 p1 / p2 + plot_layout(guides = "collect")
+```
+```{r, warning=FALSE, message=FALSE, fig.width=8, fig.height=13}
+anyfitlm <- vector("list", 6)
+i = 1
+for(s in unique(as.character(dat$sample))){
+  for(n in unique(dat$name)){
+    data <- dat[dat$sample == s & dat$name == n,]
+    anyfitlm[[i]] <- data.frame(fit = predict(lm(any ~ value, data = data)),
+                      sample = s,
+                      name = n,
+                      cell = dat$cell[dat$sample == s & dat$name == n])
+    
+    i = i + 1
+  }   
+}
+anyfitlm <- bind_rows(anyfitlm)
 
-unique(dat$sample)
+bothfitlm <- vector("list", 6)
+i = 1
+for(s in unique(dat$sample)){
+  for(n in unique(dat$name)){
+    data <- dat[dat$sample == s & dat$name == n,]
+    bothfitlm[[i]] <- data.frame(fit = predict(lm(both ~ value, data = data)),
+                      sample = s,
+                      name = n,
+                      cell = dat$cell[dat$sample == s & dat$name == n])
+    i = i + 1
+  }   
+}
+bothfitlm <- bind_rows(bothfitlm)
+
+fitDat <- inner_join(dat, anyfitlm, 
+                     by = c("sample","name","cell")) %>%
+  inner_join(bothfitlm,
+             by = c("sample","name","cell"),
+             suffix = c(".any", ".both"))
+
+newPal <- pal[-1]
+names(newPal) <- c("granulocytes","lymphocytes","macrophages","AEC")
+
+samps <- as.character(unique(fitDat$sample))
+p1 <- vector("list", length(samps))
+
+for(i in 1:length(samps)){
+  dat1 <- dplyr::filter(fitDat, sample == samps[i] & name == "original")
+  c1 <- cor.test(dat1$any, dat1$value)
+  p1[[i]] <- ggplot(dat1, aes(x = value, y = any)) +
+    geom_point(aes(colour = cell), size = 3) +
+    geom_line(aes(y = fit.any), colour = "darkgrey", linetype = "dashed") + 
+    labs(x = "Flow cytometry measure", y = "DNAm estimate",
+         colour = "Cell type") +
+    coord_cartesian(ylim = c(0, 1), xlim = c(0, 1)) +
+    ggtitle(samps[i]) +
+    scale_color_manual(values = newPal) + 
+    annotate("text", x = 0, y = 0.9, hjust = 0, size = 2.5,
+             label = glue::glue("Cor (Pearson) = {round(c1$estimate, 4)}
+                               p-value = {signif(c1$p.value, 4)}")) +
+    theme(plot.title = element_text(size = 10),
+          axis.title = element_text(size = 9),
+          axis.text = element_text(size = 8))
+  
+}
+
+p2 <- vector("list", length(samps))
+
+for(i in 1:length(samps)){
+  dat1 <- dplyr::filter(fitDat, sample == samps[i] & name == "scaled")
+  c1 <- cor.test(dat1$any, dat1$value)
+  p2[[i]] <- ggplot(dat1, aes(x = value, y = any)) +
+    geom_point(aes(colour = cell), size = 3) +
+    geom_line(aes(y = fit.any), colour = "darkgrey", linetype = "dashed") + 
+    labs(x = "Flow cytometry measure", y = "DNAm estimate",
+         colour = "Cell type") +
+    coord_cartesian(ylim = c(0, 1), xlim = c(0, 1)) +
+    ggtitle(samps[i]) +
+    scale_color_manual(values = newPal) + 
+    annotate("text", x = 0, y = 0.9, hjust = 0, size = 2.5,
+             label = glue::glue("Cor (Pearson) = {round(c1$estimate, 4)}
+                               p-value = {signif(c1$p.value, 4)}")) +
+    theme(plot.title = element_text(size = 10),
+          axis.title = element_text(size = 9),
+          axis.text = element_text(size = 8))
+  
+}
+
+p3 <- vector("list", length(samps))
+
+for(i in 1:length(samps)){
+  dat1 <- dplyr::filter(fitDat, sample == samps[i] & name == "original")
+  c1 <- cor.test(dat1$both, dat1$value)
+  p3[[i]] <- ggplot(dat1, aes(x = value, y = both)) +
+    geom_point(aes(colour = cell), size = 3) +
+    geom_line(aes(y = fit.both), colour = "darkgrey", linetype = "dashed") + 
+    labs(x = "Flow cytometry measure", y = "DNAm estimate",
+         colour = "Cell type") +
+    coord_cartesian(ylim = c(0, 1), xlim = c(0, 1)) +
+    ggtitle(samps[i]) +
+    scale_color_manual(values = newPal) + 
+    annotate("text", x = 0, y = 0.9, hjust = 0, size = 2.5,
+             label = glue::glue("Cor (Pearson) = {round(c1$estimate, 4)}
+                               p-value = {signif(c1$p.value, 4)}")) +
+    theme(plot.title = element_text(size = 10),
+          axis.title = element_text(size = 9),
+          axis.text = element_text(size = 8))
+  
+}
+
+p4 <- vector("list", length(samps))
+
+for(i in 1:length(samps)){
+  dat1 <- dplyr::filter(fitDat, sample == samps[i] & name == "scaled")
+  c1 <- cor.test(dat1$both, dat1$value)
+  p4[[i]] <- ggplot(dat1, aes(x = value, y = both)) +
+    geom_point(aes(colour = cell), size = 3) +
+    geom_line(aes(y = fit.both), colour = "darkgrey", linetype = "dashed") + 
+    labs(x = "Flow cytometry measure", y = "DNAm estimate",
+         colour = "Cell type") +
+    coord_cartesian(ylim = c(0, 1), xlim = c(0, 1)) +
+    ggtitle(samps[i]) +
+    scale_color_manual(values = newPal) + 
+    annotate("text", x = 0, y = 0.9, hjust = 0, size = 2.5,
+             label = glue::glue("Cor (Pearson) = {round(c1$estimate, 4)}
+                               p-value = {signif(c1$p.value, 4)}")) +
+    theme(plot.title = element_text(size = 10),
+          axis.title = element_text(size = 9),
+          axis.text = element_text(size = 8))
+  
+}
+
+a <- wrap_plots(p1, ncol = 3, guides = "collect") +
+  plot_annotation(title = "Probe selection: Any - Flow data: Original") & 
+  theme(legend.position = "none",
+          plot.title = element_text(size = 12))
+b <- wrap_plots(p2, ncol = 3, guides = "collect") +
+  plot_annotation(title = "Probe selection: Any - Flow data: Scaled") & 
+  theme(legend.position = "bottom",
+          plot.title = element_text(size = 12))
+c <- wrap_plots(p3, ncol = 3, guides = "collect") +
+  plot_annotation(title = "Probe selection: Both - Flow data: Original") & 
+  theme(legend.position = "none",
+          plot.title = element_text(size = 12))
+d <- wrap_plots(p4, ncol = 3, guides = "collect") +
+  plot_annotation(title = "Probe selection: Both - Flow data: Scaled") & 
+  theme(legend.position = "bottom",
+          plot.title = element_text(size = 12))
+
+ab <- (wrap_elements(a) / wrap_elements(b)) + 
+  plot_layout(guides = "collect") + 
+  plot_annotation(tag_levels = "A") &
+    theme(plot.tag = element_text(face = 'bold', size = 16))
+
+cd <- (wrap_elements(c) / wrap_elements(d)) + 
+  plot_layout(guides = "collect") + 
+  plot_annotation(tag_levels = "A") &
+    theme(plot.tag = element_text(face = 'bold', size = 16))
+
+ab
+cd
 ```
 
 ```{r, fig.width=8, fig.height=13}
@@ -518,5 +674,3 @@ p2 <- wrap_plots(p, ncol = 3, guides = "collect") +
   plot_annotation(tag_levels = "A") &
     theme(plot.tag = element_text(face = 'bold', size = 16))
 ```
-
-
