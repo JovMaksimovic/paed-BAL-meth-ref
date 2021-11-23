@@ -11,7 +11,7 @@
 
 <meta name="author" content="Jovana Maksimovic" />
 
-<meta name="date" content="2021-10-01" />
+<meta name="date" content="2021-11-23" />
 
 <title>Methylation profiling of paediatric Bronchoalveolar Lavage (BAL)</title>
 
@@ -392,9 +392,9 @@ div.tocify {
 
 
 <h1 class="title toc-ignore">Methylation profiling of paediatric Bronchoalveolar Lavage (BAL)</h1>
-<h3 class="subtitle">Estimating cell type proportions of paediatric BAL</h3>
+<h3 class="subtitle">Estimating cell type proportions of raw paediatric BAL</h3>
 <h4 class="author">Jovana Maksimovic</h4>
-<h4 class="date">2021-10-01</h4>
+<h4 class="date">2021-11-23</h4>
 
 </div>
 
@@ -419,7 +419,7 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2021-10-01
+<strong>Last updated:</strong> 2021-11-23
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
@@ -510,16 +510,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsatlassianpetermacorgaubitbucketscmospaedbalmethreftree56c3bda3e88d382a8a6bb500cb3ba75453519e84targetblank56c3bdaa"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/tree/56c3bda3e88d382a8a6bb500cb3ba75453519e84" target="_blank">56c3bda</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsatlassianpetermacorgaubitbucketscmospaedbalmethreftree4675ddecc968872d00b256d6956fe401768b3e1dtargetblank4675ddea"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/tree/4675ddecc968872d00b256d6956fe401768b3e1d" target="_blank">4675dde</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsatlassianpetermacorgaubitbucketscmospaedbalmethreftree56c3bda3e88d382a8a6bb500cb3ba75453519e84targetblank56c3bdaa" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsatlassianpetermacorgaubitbucketscmospaedbalmethreftree4675ddecc968872d00b256d6956fe401768b3e1dtargetblank4675ddea" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/tree/56c3bda3e88d382a8a6bb500cb3ba75453519e84" target="_blank">56c3bda</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/tree/4675ddecc968872d00b256d6956fe401768b3e1d" target="_blank">4675dde</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -529,10 +529,19 @@ Ignored files:
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
     Ignored:    code/deident.R
+    Ignored:    code/geoprep.R
     Ignored:    data/idat/
+    Ignored:    data/processedData.RData
+    Ignored:    output/GO-Any.csv
+    Ignored:    output/GO-Both.csv
+    Ignored:    output/GO-Diff.csv
+    Ignored:    output/GO-Same.csv
+    Ignored:    output/intensities.csv
+    Ignored:    output/processed.csv
 
 Unstaged changes:
     Modified:   .gitignore
+    Modified:   data/Samplesheet_BAL_reference.csv
 
 </code></pre>
 <p>
@@ -571,6 +580,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/blob/4675ddecc968872d00b256d6956fe401768b3e1d/analysis/estimateCellProportions.Rmd" target="_blank">4675dde</a>
+</td>
+<td>
+Jovana Maksimovic
+</td>
+<td>
+2021-11-23
+</td>
+<td>
+wflow_publish(c(“analysis/dataPreprocess.Rmd”, “analysis/estimateCellProportions.Rmd”))
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/blob/215068501d56b6ac71bcab25e0a4cfc2141f4139/docs/estimateCellProportions.html" target="_blank">2150685</a>
+</td>
+<td>
+Jovana Maksimovic
+</td>
+<td>
+2021-10-01
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -697,8 +740,8 @@ wflow_publish(c(“analysis/index.Rmd”, “analysis/dataPreprocess.Rmd”,
 </div>
 </div>
 </div>
-<div id="data-input" class="section level1">
-<h1>Data input</h1>
+<div id="data-import" class="section level1">
+<h1>Data import</h1>
 <p>Load all necessary analysis packages.</p>
 <pre class="r"><code>library(here)
 library(workflowr)
@@ -714,7 +757,9 @@ library(ggplot2)
 library(ExperimentHub)
 library(reshape2)
 library(tidyverse)
-library(patchwork)</code></pre>
+library(patchwork)
+library(missMethyl)
+library(cowplot)</code></pre>
 <p>Load raw and processed data objects generated by exploratory analysis.</p>
 <pre class="r"><code># load data objects
 load(here(&quot;data/processedData.RData&quot;))
@@ -734,7 +779,7 @@ p &lt;- ggplot(dat, aes(x = x, y = y, colour = sample)) +
        x = &quot;Principal component 1&quot;, 
        y = &quot;Principal component 2&quot;) +
   ggtitle(&quot;Cell types&quot;) +
-  scale_color_manual(values = pal)
+  scale_color_manual(values = pal[-2])
 p</code></pre>
 <p><img src="figure/estimateCellProportions.Rmd/unnamed-chunk-3-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>
@@ -774,26 +819,35 @@ Jovana Maksimovic
 </table>
 </div>
 </div>
-<p>Identify cell type discriminating probes using the <em>any</em> and <em>both</em> method (<em>both</em> selects an equal number (50) of probes (with F-stat p-value &lt; 1E-8) with the greatest magnitude of effect from the hyper and hypo methylated sides; or <em>any</em>, which selects the 100 probes (with F-stat p-value &lt; 1E-8) with the greatest magnitude of difference regardless of direction of effect.).</p>
+</div>
+<div id="identify-cell-type-discriminating-probes" class="section level1">
+<h1>Identify cell type discriminating probes</h1>
+<p>Identify cell type discriminating probesusing the <em>any</em> and <em>both</em> method (<em>both</em> selects an equal number (50) of probes (with F-stat p-value &lt; 1E-8) with the greatest magnitude of effect from the hyper and hypo methylated sides; or <em>any</em>, which selects the 100 probes (with F-stat p-value &lt; 1E-8) with the greatest magnitude of difference regardless of direction of effect.).</p>
 <pre class="r"><code>mSetSqFlt$CellType &lt;- as.character(targets$Sample_Group)
 
-pAny &lt;- minfi:::pickCompProbes(mSet = mSetSqFlt[,cells], probeSelect = &quot;any&quot;,
+pAny &lt;- minfi:::pickCompProbes(mSet = mSetSqFlt[rownames(mSetSqFlt) %in% rownames(mValsNoXY),
+                                                cells], probeSelect = &quot;any&quot;,
                        numProbes = 50, compositeCellType = &quot;Lavage&quot;, 
                        cellTypes = unique(targets$Sample_Group[cells]))
-pBoth &lt;- minfi:::pickCompProbes(mSet = mSetSqFlt[,cells], probeSelect = &quot;both&quot;,
+pBoth &lt;- minfi:::pickCompProbes(mSet = mSetSqFlt[rownames(mSetSqFlt) %in% rownames(mValsNoXY),
+                                                 cells], probeSelect = &quot;both&quot;,
                        numProbes = 50, compositeCellType = &quot;Lavage&quot;, 
                        cellTypes = unique(targets$Sample_Group[cells]))</code></pre>
+<div id="compare-different-selection-methods" class="section level2">
+<h2>Compare different selection methods</h2>
 <p>Use a heatmap to visulalise the methylation of the cell type discriminating probes in the cell sorted samples.</p>
+<div id="figure-3" class="section level3">
+<h3><strong>Figure 3</strong></h3>
 <pre class="r"><code>par(mfrow=c(1,2))
 NMF::aheatmap(bVals[rownames(bVals) %in% rownames(pAny$coefEsts), cells],
          annCol = list(CellType = as.character(targets$Sample_Group[cells])), 
          labCol = NA, labRow = NA, annColors = list(pal[-2]),
-         main=&quot;A. ProbeSelect = Any&quot;)
+         main=&quot;A. Probe select = &#39;Any&#39;&quot;)
 
 NMF::aheatmap(bVals[rownames(bVals) %in% rownames(pBoth$coefEsts), cells],
          annCol = list(CellType = as.character(targets$Sample_Group[cells])), 
          labCol = NA, labRow = NA, annColors = list(pal[-2]),
-         main=&quot;B. ProbeSelect = Both&quot;)</code></pre>
+         main=&quot;B. Probe select = &#39;Both&#39;&quot;)</code></pre>
 <p><img src="figure/estimateCellProportions.Rmd/unnamed-chunk-5-1.png" width="960" style="display: block; margin: auto;" /></p>
 <p>
 <button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-5-1">
@@ -833,48 +887,548 @@ Jovana Maksimovic
 </div>
 </div>
 </div>
-<div id="estimate-cell-type-proportions-of-bal-samples" class="section level1">
-<h1>Estimate cell type proportions of BAL samples</h1>
-<div id="artificial-mixture" class="section level2">
-<h2>Artificial mixture</h2>
-<p>We will use blood immune cell mixtures with known cell type proportions published by Salas et al. 2018 to test the accuracy of cell type proportion estimates derived using our reference library.</p>
-<pre class="r"><code>hub &lt;- ExperimentHub()  </code></pre>
-<pre><code>snapshotDate(): 2020-10-27</code></pre>
-<pre class="r"><code>query(hub, &quot;FlowSorted.Blood.EPIC&quot;)  </code></pre>
-<pre><code>ExperimentHub with 1 record
-# snapshotDate(): 2020-10-27
-# names(): EH1136
-# package(): FlowSorted.Blood.EPIC
-# $dataprovider: GEO
-# $species: Homo sapiens
-# $rdataclass: RGChannelSet
-# $rdatadateadded: 2018-04-20
-# $title: FlowSorted.Blood.EPIC: Illumina Human Methylation data from EPIC o...
-# $description: The FlowSorted.Blood.EPIC package contains Illumina HumanMet...
-# $taxonomyid: 9606
-# $genome: hg19
-# $sourcetype: tar.gz
-# $sourceurl: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE110554
-# $sourcesize: NA
-# $tags: c(&quot;ExperimentData&quot;, &quot;Homo_sapiens_Data&quot;, &quot;Tissue&quot;,
-#   &quot;MicroarrayData&quot;, &quot;Genome&quot;, &quot;TissueMicroarrayData&quot;,
-#   &quot;MethylationArrayData&quot;) 
-# retrieve record with &#39;object[[&quot;EH1136&quot;]]&#39; </code></pre>
-<pre class="r"><code>FlowSorted.Blood.EPIC &lt;- hub[[&quot;EH1136&quot;]]</code></pre>
-<pre><code>see ?FlowSorted.Blood.EPIC and browseVignettes(&#39;FlowSorted.Blood.EPIC&#39;) for documentation</code></pre>
-<pre><code>loading from cache</code></pre>
-<pre class="r"><code># separate the reference from the testing dataset  
-RGsetTargets &lt;- FlowSorted.Blood.EPIC[,FlowSorted.Blood.EPIC$CellType == &quot;MIX&quot;]
-mixReal &lt;- as.matrix(colData(RGsetTargets)[,12:17])/100</code></pre>
-<pre class="r"><code>mixDat &lt;- melt(mixReal)
-colnames(mixDat) &lt;- c(&quot;sample&quot;,&quot;cell&quot;,&quot;proportion&quot;)
+</div>
+<div id="characteristics-of-probes-selected-using-any" class="section level2">
+<h2>Characteristics of probes selected using <em>“any”</em></h2>
+<pre class="r"><code>ann &lt;- getAnnotation(IlluminaHumanMethylationEPICanno.ilm10b4.hg19)
+sub &lt;- targets[targets$Sample_Group != &quot;Raw&quot;,]
+tmp &lt;- mValsNoXY[rownames(mValsNoXY) %in% rownames(pAny$coefEsts), 
+                 colnames(mValsNoXY) %in% sub$Sample_ID]
+tmpAny &lt;- ann[match(rownames(tmp), ann$Name), -c(5:17,20,21,23,32:37)]
 
-p &lt;- ggplot(mixDat, aes(sample)) + 
-  geom_bar(aes(fill = cell, weight=proportion)) +
-  scale_x_discrete(breaks = waiver(), labels=1:nrow(mixReal)) +
-  ggtitle(&quot;Artificially created cell mixtures&quot;) +
-  labs(y = &quot;Proportion&quot;, x = &quot;Mixture&quot;, fill = &quot;Cell type&quot;)
-p</code></pre>
+topAnyFile &lt;- here(&quot;output&quot;,
+                   glue(&quot;GO-Any.csv&quot;))
+
+if(!file.exists(topAnyFile)){
+  gstAny &lt;- gometh(sig.cpg = rownames(pAny$coefEsts), 
+                   all.cpg = rownames(mValsNoXY), 
+                   anno = ann)
+  topAny &lt;- topGSA(gstAny, number = 50)
+  write.csv(topAny, topAnyFile)
+  
+} else {
+  topAny &lt;- read.csv(topAnyFile, row.names = 1)
+  
+}
+
+topAny %&gt;% knitr::kable()</code></pre>
+<table style="width:100%;">
+<colgroup>
+<col width="8%" />
+<col width="7%" />
+<col width="62%" />
+<col width="3%" />
+<col width="2%" />
+<col width="7%" />
+<col width="7%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">ONTOLOGY</th>
+<th align="left">TERM</th>
+<th align="right">N</th>
+<th align="right">DE</th>
+<th align="right">P.DE</th>
+<th align="right">FDR</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><a href="GO:0045321" class="uri">GO:0045321</a></td>
+<td align="left">BP</td>
+<td align="left">leukocyte activation</td>
+<td align="right">1197</td>
+<td align="right">37</td>
+<td align="right">0.0000054</td>
+<td align="right">0.1223846</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0042110" class="uri">GO:0042110</a></td>
+<td align="left">BP</td>
+<td align="left">T cell activation</td>
+<td align="right">464</td>
+<td align="right">20</td>
+<td align="right">0.0000268</td>
+<td align="right">0.2365053</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:0006955" class="uri">GO:0006955</a></td>
+<td align="left">BP</td>
+<td align="left">immune response</td>
+<td align="right">1912</td>
+<td align="right">45</td>
+<td align="right">0.0000431</td>
+<td align="right">0.2365053</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0007159" class="uri">GO:0007159</a></td>
+<td align="left">BP</td>
+<td align="left">leukocyte cell-cell adhesion</td>
+<td align="right">348</td>
+<td align="right">16</td>
+<td align="right">0.0000447</td>
+<td align="right">0.2365053</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:1903037" class="uri">GO:1903037</a></td>
+<td align="left">BP</td>
+<td align="left">regulation of leukocyte cell-cell adhesion</td>
+<td align="right">314</td>
+<td align="right">15</td>
+<td align="right">0.0000523</td>
+<td align="right">0.2365053</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0001775" class="uri">GO:0001775</a></td>
+<td align="left">BP</td>
+<td align="left">cell activation</td>
+<td align="right">1351</td>
+<td align="right">38</td>
+<td align="right">0.0000648</td>
+<td align="right">0.2442241</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:0050851" class="uri">GO:0050851</a></td>
+<td align="left">BP</td>
+<td align="left">antigen receptor-mediated signaling pathway</td>
+<td align="right">235</td>
+<td align="right">13</td>
+<td align="right">0.0001199</td>
+<td align="right">0.3725532</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0002684" class="uri">GO:0002684</a></td>
+<td align="left">BP</td>
+<td align="left">positive regulation of immune system process</td>
+<td align="right">950</td>
+<td align="right">28</td>
+<td align="right">0.0001597</td>
+<td align="right">0.3725532</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:0002768" class="uri">GO:0002768</a></td>
+<td align="left">BP</td>
+<td align="left">immune response-regulating cell surface receptor signaling pathway</td>
+<td align="right">384</td>
+<td align="right">17</td>
+<td align="right">0.0001673</td>
+<td align="right">0.3725532</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0002764" class="uri">GO:0002764</a></td>
+<td align="left">BP</td>
+<td align="left">immune response-regulating signaling pathway</td>
+<td align="right">387</td>
+<td align="right">17</td>
+<td align="right">0.0001731</td>
+<td align="right">0.3725532</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:0002429" class="uri">GO:0002429</a></td>
+<td align="left">BP</td>
+<td align="left">immune response-activating cell surface receptor signaling pathway</td>
+<td align="right">353</td>
+<td align="right">16</td>
+<td align="right">0.0001976</td>
+<td align="right">0.3725532</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0002757" class="uri">GO:0002757</a></td>
+<td align="left">BP</td>
+<td align="left">immune response-activating signal transduction</td>
+<td align="right">353</td>
+<td align="right">16</td>
+<td align="right">0.0001976</td>
+<td align="right">0.3725532</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:0002682" class="uri">GO:0002682</a></td>
+<td align="left">BP</td>
+<td align="left">regulation of immune system process</td>
+<td align="right">1458</td>
+<td align="right">37</td>
+<td align="right">0.0002646</td>
+<td align="right">0.4604714</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0046649" class="uri">GO:0046649</a></td>
+<td align="left">BP</td>
+<td align="left">lymphocyte activation</td>
+<td align="right">661</td>
+<td align="right">22</td>
+<td align="right">0.0003418</td>
+<td align="right">0.5270029</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:0042060" class="uri">GO:0042060</a></td>
+<td align="left">BP</td>
+<td align="left">wound healing</td>
+<td align="right">514</td>
+<td align="right">21</td>
+<td align="right">0.0003495</td>
+<td align="right">0.5270029</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0050900" class="uri">GO:0050900</a></td>
+<td align="left">BP</td>
+<td align="left">leukocyte migration</td>
+<td align="right">442</td>
+<td align="right">16</td>
+<td align="right">0.0005924</td>
+<td align="right">0.7996714</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:0045579" class="uri">GO:0045579</a></td>
+<td align="left">BP</td>
+<td align="left">positive regulation of B cell differentiation</td>
+<td align="right">11</td>
+<td align="right">3</td>
+<td align="right">0.0006356</td>
+<td align="right">0.7996714</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0042117" class="uri">GO:0042117</a></td>
+<td align="left">BP</td>
+<td align="left">monocyte activation</td>
+<td align="right">10</td>
+<td align="right">3</td>
+<td align="right">0.0006594</td>
+<td align="right">0.7996714</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:0002252" class="uri">GO:0002252</a></td>
+<td align="left">BP</td>
+<td align="left">immune effector process</td>
+<td align="right">1149</td>
+<td align="right">29</td>
+<td align="right">0.0006717</td>
+<td align="right">0.7996714</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0002280" class="uri">GO:0002280</a></td>
+<td align="left">BP</td>
+<td align="left">monocyte activation involved in immune response</td>
+<td align="right">2</td>
+<td align="right">2</td>
+<td align="right">0.0007406</td>
+<td align="right">0.8376712</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:0002253" class="uri">GO:0002253</a></td>
+<td align="left">BP</td>
+<td align="left">activation of immune response</td>
+<td align="right">436</td>
+<td align="right">16</td>
+<td align="right">0.0007811</td>
+<td align="right">0.8414019</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0044706" class="uri">GO:0044706</a></td>
+<td align="left">BP</td>
+<td align="left">multi-multicellular organism process</td>
+<td align="right">214</td>
+<td align="right">10</td>
+<td align="right">0.0009203</td>
+<td align="right">0.9462395</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:0000506" class="uri">GO:0000506</a></td>
+<td align="left">CC</td>
+<td align="left">glycosylphosphatidylinositol-N-acetylglucosaminyltransferase (GPI-GnT) complex</td>
+<td align="right">7</td>
+<td align="right">2</td>
+<td align="right">0.0010079</td>
+<td align="right">0.9482012</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0033292" class="uri">GO:0033292</a></td>
+<td align="left">BP</td>
+<td align="left">T-tubule organization</td>
+<td align="right">9</td>
+<td align="right">3</td>
+<td align="right">0.0010734</td>
+<td align="right">0.9482012</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:0050776" class="uri">GO:0050776</a></td>
+<td align="left">BP</td>
+<td align="left">regulation of immune response</td>
+<td align="right">868</td>
+<td align="right">23</td>
+<td align="right">0.0011227</td>
+<td align="right">0.9482012</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0002274" class="uri">GO:0002274</a></td>
+<td align="left">BP</td>
+<td align="left">myeloid leukocyte activation</td>
+<td align="right">638</td>
+<td align="right">19</td>
+<td align="right">0.0011231</td>
+<td align="right">0.9482012</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:0050778" class="uri">GO:0050778</a></td>
+<td align="left">BP</td>
+<td align="left">positive regulation of immune response</td>
+<td align="right">631</td>
+<td align="right">19</td>
+<td align="right">0.0011318</td>
+<td align="right">0.9482012</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0090575" class="uri">GO:0090575</a></td>
+<td align="left">CC</td>
+<td align="left">RNA polymerase II transcription regulator complex</td>
+<td align="right">153</td>
+<td align="right">9</td>
+<td align="right">0.0013139</td>
+<td align="right">1.0000000</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:0071889" class="uri">GO:0071889</a></td>
+<td align="left">MF</td>
+<td align="left">14-3-3 protein binding</td>
+<td align="right">32</td>
+<td align="right">5</td>
+<td align="right">0.0014092</td>
+<td align="right">1.0000000</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0047756" class="uri">GO:0047756</a></td>
+<td align="left">MF</td>
+<td align="left">chondroitin 4-sulfotransferase activity</td>
+<td align="right">3</td>
+<td align="right">2</td>
+<td align="right">0.0014457</td>
+<td align="right">1.0000000</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:2000401" class="uri">GO:2000401</a></td>
+<td align="left">BP</td>
+<td align="left">regulation of lymphocyte migration</td>
+<td align="right">61</td>
+<td align="right">5</td>
+<td align="right">0.0014616</td>
+<td align="right">1.0000000</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0022407" class="uri">GO:0022407</a></td>
+<td align="left">BP</td>
+<td align="left">regulation of cell-cell adhesion</td>
+<td align="right">423</td>
+<td align="right">16</td>
+<td align="right">0.0015827</td>
+<td align="right">1.0000000</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:0072676" class="uri">GO:0072676</a></td>
+<td align="left">BP</td>
+<td align="left">lymphocyte migration</td>
+<td align="right">110</td>
+<td align="right">6</td>
+<td align="right">0.0015912</td>
+<td align="right">1.0000000</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0009611" class="uri">GO:0009611</a></td>
+<td align="left">BP</td>
+<td align="left">response to wounding</td>
+<td align="right">631</td>
+<td align="right">22</td>
+<td align="right">0.0020200</td>
+<td align="right">1.0000000</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:0050765" class="uri">GO:0050765</a></td>
+<td align="left">BP</td>
+<td align="left">negative regulation of phagocytosis</td>
+<td align="right">21</td>
+<td align="right">3</td>
+<td align="right">0.0020369</td>
+<td align="right">1.0000000</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:1903039" class="uri">GO:1903039</a></td>
+<td align="left">BP</td>
+<td align="left">positive regulation of leukocyte cell-cell adhesion</td>
+<td align="right">225</td>
+<td align="right">10</td>
+<td align="right">0.0023518</td>
+<td align="right">1.0000000</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:0002263" class="uri">GO:0002263</a></td>
+<td align="left">BP</td>
+<td align="left">cell activation involved in immune response</td>
+<td align="right">691</td>
+<td align="right">19</td>
+<td align="right">0.0024561</td>
+<td align="right">1.0000000</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0016427" class="uri">GO:0016427</a></td>
+<td align="left">MF</td>
+<td align="left">tRNA (cytosine) methyltransferase activity</td>
+<td align="right">8</td>
+<td align="right">2</td>
+<td align="right">0.0025014</td>
+<td align="right">1.0000000</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:0032940" class="uri">GO:0032940</a></td>
+<td align="left">BP</td>
+<td align="left">secretion by cell</td>
+<td align="right">1368</td>
+<td align="right">35</td>
+<td align="right">0.0025651</td>
+<td align="right">1.0000000</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0097470" class="uri">GO:0097470</a></td>
+<td align="left">CC</td>
+<td align="left">ribbon synapse</td>
+<td align="right">11</td>
+<td align="right">3</td>
+<td align="right">0.0026002</td>
+<td align="right">1.0000000</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:1990266" class="uri">GO:1990266</a></td>
+<td align="left">BP</td>
+<td align="left">neutrophil migration</td>
+<td align="right">115</td>
+<td align="right">6</td>
+<td align="right">0.0026339</td>
+<td align="right">1.0000000</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0001025" class="uri">GO:0001025</a></td>
+<td align="left">MF</td>
+<td align="left">RNA polymerase III general transcription initiation factor binding</td>
+<td align="right">3</td>
+<td align="right">2</td>
+<td align="right">0.0026871</td>
+<td align="right">1.0000000</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:0001156" class="uri">GO:0001156</a></td>
+<td align="left">MF</td>
+<td align="left">TFIIIC-class transcription factor complex binding</td>
+<td align="right">3</td>
+<td align="right">2</td>
+<td align="right">0.0026871</td>
+<td align="right">1.0000000</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0010452" class="uri">GO:0010452</a></td>
+<td align="left">BP</td>
+<td align="left">histone H3-K36 methylation</td>
+<td align="right">14</td>
+<td align="right">3</td>
+<td align="right">0.0027548</td>
+<td align="right">1.0000000</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:0045648" class="uri">GO:0045648</a></td>
+<td align="left">BP</td>
+<td align="left">positive regulation of erythrocyte differentiation</td>
+<td align="right">31</td>
+<td align="right">4</td>
+<td align="right">0.0027781</td>
+<td align="right">1.0000000</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0043374" class="uri">GO:0043374</a></td>
+<td align="left">BP</td>
+<td align="left">CD8-positive, alpha-beta T cell differentiation</td>
+<td align="right">15</td>
+<td align="right">3</td>
+<td align="right">0.0028800</td>
+<td align="right">1.0000000</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:0010793" class="uri">GO:0010793</a></td>
+<td align="left">BP</td>
+<td align="left">regulation of mRNA export from nucleus</td>
+<td align="right">5</td>
+<td align="right">2</td>
+<td align="right">0.0029618</td>
+<td align="right">1.0000000</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0034481" class="uri">GO:0034481</a></td>
+<td align="left">MF</td>
+<td align="left">chondroitin sulfotransferase activity</td>
+<td align="right">4</td>
+<td align="right">2</td>
+<td align="right">0.0030074</td>
+<td align="right">1.0000000</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:0050863" class="uri">GO:0050863</a></td>
+<td align="left">BP</td>
+<td align="left">regulation of T cell activation</td>
+<td align="right">321</td>
+<td align="right">12</td>
+<td align="right">0.0030207</td>
+<td align="right">1.0000000</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0002376" class="uri">GO:0002376</a></td>
+<td align="left">BP</td>
+<td align="left">immune system process</td>
+<td align="right">2849</td>
+<td align="right">57</td>
+<td align="right">0.0030691</td>
+<td align="right">1.0000000</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>flatAnn &lt;- missMethyl:::.getFlatAnnotation(&quot;EPIC&quot;)
+dat &lt;- tmpAny
+dat %&gt;% data.frame %&gt;%
+  left_join(flatAnn, by = c(&quot;Name&quot; = &quot;cpg&quot;)) -&gt; dat
+
+dat %&gt;%
+ggplot(aes(x = Relation_to_Island, 
+           fill = Relation_to_Island)) +
+  geom_bar(aes(y = (..count..)/sum(..count..)*100)) +
+  labs(x = &quot;Relation_to_Island&quot;, y = &quot;% Features&quot;) +
+  theme_cowplot(font_size = 12) -&gt; p1
+
+dat %&gt;%
+  mutate(Gene = UCSC_RefGene_Name != &quot;&quot;) %&gt;%
+  ggplot(aes(x = Gene, 
+           fill = Gene)) +
+  geom_bar(aes(y = (..count..)/sum(..count..)*100)) +
+  labs(x = &quot;Gene_associated&quot;, y = &quot;% Features&quot;) +
+  theme_cowplot(font_size = 12) -&gt; p2
+
+dat %&gt;%
+  mutate(group = ifelse(is.na(group), &quot;Intergenic&quot;, group)) %&gt;%
+  ggplot(aes(x = group, 
+           fill = group)) +
+  geom_bar(aes(y = (..count..)/sum(..count..)*100)) +
+  labs(x = &quot;Position_in_Gene&quot;, y = &quot;% Features&quot;) +
+  theme_cowplot(font_size = 12) -&gt; p3
+
+dat %&gt;%
+  mutate(DHS = DNase_Hypersensitivity_NAME != &quot;&quot;) %&gt;%
+  ggplot(aes(x = DHS, 
+           fill = DHS)) +
+  geom_bar(aes(y = (..count..)/sum(..count..)*100)) +
+  labs(x = &quot;DNase_Hypersensitivity_Site&quot;, y = &quot;% Features&quot;) +
+  theme_cowplot(font_size = 12) -&gt; p4
+
+((p1 | p2 ) /
+  (p3 | p4)) &amp; 
+  theme(legend.position = &quot;none&quot;,
+        legend.text = element_text(size = 7),
+        legend.title = element_text(size = 8),
+        axis.text = element_text(size = 6)) -&gt; anyLoci
+anyLoci</code></pre>
 <p><img src="figure/estimateCellProportions.Rmd/unnamed-chunk-7-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>
 <button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-7-1">
@@ -913,24 +1467,289 @@ Jovana Maksimovic
 </table>
 </div>
 </div>
-<p>We have not sorted our BAL lymphocytes into B cells, T cells and NK cells, so the “true” lymphocyte value we will compare to is the sum of the proportions of those cells in the artificial mixture.</p>
-<pre class="r"><code>mixSum &lt;- data.frame(mixReal[,5:6], Lymph = rowSums(mixReal[,1:4]))
-mixSumDat &lt;- melt(as.matrix(mixSum))
-colnames(mixSumDat) &lt;- c(&quot;sample&quot;,&quot;cell&quot;,&quot;proportion&quot;)
+</div>
+<div id="characteristics-of-probes-selected-using-both" class="section level2">
+<h2>Characteristics of probes selected using <em>“both”</em></h2>
+<pre class="r"><code>sub &lt;- targets[targets$Sample_Group != &quot;Raw&quot;,]
+tmp &lt;- mValsNoXY[rownames(mValsNoXY) %in% rownames(pBoth$coefEsts), 
+                 colnames(mValsNoXY) %in% sub$Sample_ID]
+tmpBoth &lt;- ann[match(rownames(tmp), ann$Name), -c(5:17,20,21,23,32:37)]
 
-p &lt;- ggplot(mixSumDat, aes(sample)) + 
-  geom_bar(aes(fill = cell, weight = proportion)) +
-    scale_x_discrete(breaks = waiver(), labels = 1:nrow(mixReal)) +
-    ggtitle(&quot;Artificially created cell mixtures&quot;) +
-  labs(y = &quot;Proportion&quot;, x = &quot;Mixture&quot;, fill = &quot;Cell type&quot;)
-p</code></pre>
-<p><img src="figure/estimateCellProportions.Rmd/unnamed-chunk-8-1.png" width="672" style="display: block; margin: auto;" /></p>
+topBothFile &lt;- here(&quot;output&quot;,
+                   glue(&quot;GO-Both.csv&quot;))
+
+if(!file.exists(topBothFile)){
+  gstBoth &lt;- gometh(sig.cpg = rownames(pBoth$coefEsts), 
+                   all.cpg = rownames(mValsNoXY), 
+                   anno = ann)
+  topBoth &lt;- topGSA(gstBoth, number = 50)
+  write.csv(topBoth, topBothFile)
+  
+} else {
+  topBoth &lt;- read.csv(topBothFile, row.names = 1)
+  
+}
+
+topGSA(topBoth) %&gt;% knitr::kable()</code></pre>
+<table style="width:100%;">
+<colgroup>
+<col width="8%" />
+<col width="7%" />
+<col width="62%" />
+<col width="3%" />
+<col width="2%" />
+<col width="7%" />
+<col width="7%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">ONTOLOGY</th>
+<th align="left">TERM</th>
+<th align="right">N</th>
+<th align="right">DE</th>
+<th align="right">P.DE</th>
+<th align="right">FDR</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><a href="GO:0007159" class="uri">GO:0007159</a></td>
+<td align="left">BP</td>
+<td align="left">leukocyte cell-cell adhesion</td>
+<td align="right">348</td>
+<td align="right">17</td>
+<td align="right">0.0000247</td>
+<td align="right">0.5583832</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0042110" class="uri">GO:0042110</a></td>
+<td align="left">BP</td>
+<td align="left">T cell activation</td>
+<td align="right">464</td>
+<td align="right">19</td>
+<td align="right">0.0001745</td>
+<td align="right">1.0000000</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:0045321" class="uri">GO:0045321</a></td>
+<td align="left">BP</td>
+<td align="left">leukocyte activation</td>
+<td align="right">1197</td>
+<td align="right">34</td>
+<td align="right">0.0002183</td>
+<td align="right">1.0000000</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0046649" class="uri">GO:0046649</a></td>
+<td align="left">BP</td>
+<td align="left">lymphocyte activation</td>
+<td align="right">661</td>
+<td align="right">23</td>
+<td align="right">0.0002950</td>
+<td align="right">1.0000000</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:1903037" class="uri">GO:1903037</a></td>
+<td align="left">BP</td>
+<td align="left">regulation of leukocyte cell-cell adhesion</td>
+<td align="right">314</td>
+<td align="right">14</td>
+<td align="right">0.0003422</td>
+<td align="right">1.0000000</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0006955" class="uri">GO:0006955</a></td>
+<td align="left">BP</td>
+<td align="left">immune response</td>
+<td align="right">1912</td>
+<td align="right">44</td>
+<td align="right">0.0003422</td>
+<td align="right">1.0000000</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:0001775" class="uri">GO:0001775</a></td>
+<td align="left">BP</td>
+<td align="left">cell activation</td>
+<td align="right">1351</td>
+<td align="right">37</td>
+<td align="right">0.0004153</td>
+<td align="right">1.0000000</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0044272" class="uri">GO:0044272</a></td>
+<td align="left">BP</td>
+<td align="left">sulfur compound biosynthetic process</td>
+<td align="right">181</td>
+<td align="right">10</td>
+<td align="right">0.0005641</td>
+<td align="right">1.0000000</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:0042117" class="uri">GO:0042117</a></td>
+<td align="left">BP</td>
+<td align="left">monocyte activation</td>
+<td align="right">10</td>
+<td align="right">3</td>
+<td align="right">0.0007333</td>
+<td align="right">1.0000000</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0002280" class="uri">GO:0002280</a></td>
+<td align="left">BP</td>
+<td align="left">monocyte activation involved in immune response</td>
+<td align="right">2</td>
+<td align="right">2</td>
+<td align="right">0.0007949</td>
+<td align="right">1.0000000</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:0002682" class="uri">GO:0002682</a></td>
+<td align="left">BP</td>
+<td align="left">regulation of immune system process</td>
+<td align="right">1458</td>
+<td align="right">37</td>
+<td align="right">0.0007958</td>
+<td align="right">1.0000000</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0002684" class="uri">GO:0002684</a></td>
+<td align="left">BP</td>
+<td align="left">positive regulation of immune system process</td>
+<td align="right">950</td>
+<td align="right">27</td>
+<td align="right">0.0008903</td>
+<td align="right">1.0000000</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:0036037" class="uri">GO:0036037</a></td>
+<td align="left">BP</td>
+<td align="left">CD8-positive, alpha-beta T cell activation</td>
+<td align="right">27</td>
+<td align="right">4</td>
+<td align="right">0.0010062</td>
+<td align="right">1.0000000</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:1903039" class="uri">GO:1903039</a></td>
+<td align="left">BP</td>
+<td align="left">positive regulation of leukocyte cell-cell adhesion</td>
+<td align="right">225</td>
+<td align="right">11</td>
+<td align="right">0.0010420</td>
+<td align="right">1.0000000</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:0048010" class="uri">GO:0048010</a></td>
+<td align="left">BP</td>
+<td align="left">vascular endothelial growth factor receptor signaling pathway</td>
+<td align="right">95</td>
+<td align="right">8</td>
+<td align="right">0.0010930</td>
+<td align="right">1.0000000</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0050776" class="uri">GO:0050776</a></td>
+<td align="left">BP</td>
+<td align="left">regulation of immune response</td>
+<td align="right">868</td>
+<td align="right">24</td>
+<td align="right">0.0011057</td>
+<td align="right">1.0000000</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:0033292" class="uri">GO:0033292</a></td>
+<td align="left">BP</td>
+<td align="left">T-tubule organization</td>
+<td align="right">9</td>
+<td align="right">3</td>
+<td align="right">0.0012279</td>
+<td align="right">1.0000000</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0000506" class="uri">GO:0000506</a></td>
+<td align="left">CC</td>
+<td align="left">glycosylphosphatidylinositol-N-acetylglucosaminyltransferase (GPI-GnT) complex</td>
+<td align="right">7</td>
+<td align="right">2</td>
+<td align="right">0.0012681</td>
+<td align="right">1.0000000</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:0007256" class="uri">GO:0007256</a></td>
+<td align="left">BP</td>
+<td align="left">activation of JNKK activity</td>
+<td align="right">10</td>
+<td align="right">3</td>
+<td align="right">0.0012843</td>
+<td align="right">1.0000000</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0015961" class="uri">GO:0015961</a></td>
+<td align="left">BP</td>
+<td align="left">diadenosine polyphosphate catabolic process</td>
+<td align="right">4</td>
+<td align="right">2</td>
+<td align="right">0.0013242</td>
+<td align="right">1.0000000</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>dat &lt;- tmpBoth
+dat %&gt;% data.frame %&gt;%
+  left_join(flatAnn, by = c(&quot;Name&quot; = &quot;cpg&quot;)) -&gt; dat
+
+dat %&gt;%
+ggplot(aes(x = Relation_to_Island, 
+           fill = Relation_to_Island)) +
+  geom_bar(aes(y = (..count..)/sum(..count..)*100)) +
+  labs(x = &quot;Relation_to_Island&quot;, y = &quot;% Features&quot;) +
+  theme_cowplot(font_size = 12) -&gt; p1
+
+dat %&gt;%
+  mutate(Gene = UCSC_RefGene_Name != &quot;&quot;) %&gt;%
+  ggplot(aes(x = Gene, 
+           fill = Gene)) +
+  geom_bar(aes(y = (..count..)/sum(..count..)*100)) +
+  labs(x = &quot;Gene_associated&quot;, y = &quot;% Features&quot;) +
+  theme_cowplot(font_size = 12) -&gt; p2
+
+dat %&gt;%
+  mutate(group = ifelse(is.na(group), &quot;Intergenic&quot;, group)) %&gt;%
+  ggplot(aes(x = group, 
+           fill = group)) +
+  geom_bar(aes(y = (..count..)/sum(..count..)*100)) +
+  labs(x = &quot;Position_in_Gene&quot;, y = &quot;% Features&quot;) +
+  theme_cowplot(font_size = 12) -&gt; p3
+
+dat %&gt;%
+  mutate(DHS = DNase_Hypersensitivity_NAME != &quot;&quot;) %&gt;%
+  ggplot(aes(x = DHS, 
+           fill = DHS)) +
+  geom_bar(aes(y = (..count..)/sum(..count..)*100)) +
+  labs(x = &quot;DNase_Hypersensitivity_Site&quot;, y = &quot;% Features&quot;) +
+  theme_cowplot(font_size = 12) -&gt; p4
+
+((p1 | p2 ) /
+  (p3 | p4)) &amp; 
+  theme(legend.position = &quot;none&quot;,
+        legend.text = element_text(size = 7),
+        legend.title = element_text(size = 8),
+        axis.text = element_text(size = 6)) -&gt; bothLoci
+bothLoci</code></pre>
+<p><img src="figure/estimateCellProportions.Rmd/unnamed-chunk-9-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div id="supplementary-figure-3" class="section level3">
+<h3><strong>Supplementary Figure 3</strong></h3>
+<pre class="r"><code>(wrap_elements(anyLoci + plot_annotation(title = &quot;Probe select = &#39;Any&#39;&quot;))  / 
+   wrap_elements(bothLoci + plot_annotation(title = &quot;Probe select = &#39;Both&#39;&quot;))) + plot_annotation(tag_levels = &quot;A&quot;) &amp;
+    theme(plot.tag = element_text(face = &#39;bold&#39;, size = 16))</code></pre>
+<p><img src="figure/estimateCellProportions.Rmd/unnamed-chunk-10-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>
-<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-8-1">
-Past versions of unnamed-chunk-8-1.png
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-10-1">
+Past versions of unnamed-chunk-10-1.png
 </button>
 </p>
-<div id="fig-unnamed-chunk-8-1" class="collapse">
+<div id="fig-unnamed-chunk-10-1" class="collapse">
 <div class="table-responsive">
 <table class="table table-condensed table-hover">
 <thead>
@@ -949,7 +1768,613 @@ Date
 <tbody>
 <tr>
 <td>
-<a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/blob/10147c01aaa38682abaf4f3694d1ce55fc634e06/docs/figure/estimateCellProportions.Rmd/unnamed-chunk-8-1.png" target="_blank">10147c0</a>
+<a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/blob/10147c01aaa38682abaf4f3694d1ce55fc634e06/docs/figure/estimateCellProportions.Rmd/unnamed-chunk-10-1.png" target="_blank">10147c0</a>
+</td>
+<td>
+Jovana Maksimovic
+</td>
+<td>
+2021-09-27
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="characteristics-of-probes-that-are-the-same-for-any-and-both" class="section level2">
+<h2>Characteristics of probes that are the same for <em>“any”</em> and <em>“both”</em></h2>
+<pre class="r"><code>same &lt;- intersect(rownames(pAny$coefEsts), rownames(pBoth$coefEsts))
+length(same)</code></pre>
+<pre><code>[1] 221</code></pre>
+<p>The number of probes that is the same using <em>any</em> and <em>both</em> is 221. This is 55.25% of the total number of cell type discriminating probes.</p>
+<pre class="r"><code>tmp &lt;- mValsNoXY[rownames(mValsNoXY) %in% same,
+                 colnames(mValsNoXY) %in% sub$Sample_ID]
+tmpSame &lt;- ann[match(rownames(tmp), ann$Name), -c(5:17,20,21,23,32:37)]
+
+topSameFile &lt;- here(&quot;output/GO-Same.csv&quot;)
+
+if(!file.exists(topSameFile)){
+  gstSame &lt;- gometh(sig.cpg = same, 
+                   all.cpg = rownames(mValsNoXY), 
+                   anno = ann)
+  topSame &lt;- topGSA(gstSame, number = 50)
+  write.csv(topSame, topSameFile)
+  
+} else {
+  topSame &lt;- read.csv(topSameFile, row.names = 1)
+  
+}
+
+
+topGSA(topSame) %&gt;% knitr::kable()</code></pre>
+<table>
+<colgroup>
+<col width="9%" />
+<col width="7%" />
+<col width="65%" />
+<col width="3%" />
+<col width="2%" />
+<col width="8%" />
+<col width="3%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">ONTOLOGY</th>
+<th align="left">TERM</th>
+<th align="right">N</th>
+<th align="right">DE</th>
+<th align="right">P.DE</th>
+<th align="right">FDR</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><a href="GO:0042117" class="uri">GO:0042117</a></td>
+<td align="left">BP</td>
+<td align="left">monocyte activation</td>
+<td align="right">10</td>
+<td align="right">3</td>
+<td align="right">0.0001583</td>
+<td align="right">1</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0033292" class="uri">GO:0033292</a></td>
+<td align="left">BP</td>
+<td align="left">T-tubule organization</td>
+<td align="right">9</td>
+<td align="right">3</td>
+<td align="right">0.0002727</td>
+<td align="right">1</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:0002280" class="uri">GO:0002280</a></td>
+<td align="left">BP</td>
+<td align="left">monocyte activation involved in immune response</td>
+<td align="right">2</td>
+<td align="right">2</td>
+<td align="right">0.0002863</td>
+<td align="right">1</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0007159" class="uri">GO:0007159</a></td>
+<td align="left">BP</td>
+<td align="left">leukocyte cell-cell adhesion</td>
+<td align="right">348</td>
+<td align="right">11</td>
+<td align="right">0.0002880</td>
+<td align="right">1</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:0000506" class="uri">GO:0000506</a></td>
+<td align="left">CC</td>
+<td align="left">glycosylphosphatidylinositol-N-acetylglucosaminyltransferase (GPI-GnT) complex</td>
+<td align="right">7</td>
+<td align="right">2</td>
+<td align="right">0.0004144</td>
+<td align="right">1</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0050765" class="uri">GO:0050765</a></td>
+<td align="left">BP</td>
+<td align="left">negative regulation of phagocytosis</td>
+<td align="right">21</td>
+<td align="right">3</td>
+<td align="right">0.0005205</td>
+<td align="right">1</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:1903037" class="uri">GO:1903037</a></td>
+<td align="left">BP</td>
+<td align="left">regulation of leukocyte cell-cell adhesion</td>
+<td align="right">314</td>
+<td align="right">10</td>
+<td align="right">0.0005293</td>
+<td align="right">1</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0047756" class="uri">GO:0047756</a></td>
+<td align="left">MF</td>
+<td align="left">chondroitin 4-sulfotransferase activity</td>
+<td align="right">3</td>
+<td align="right">2</td>
+<td align="right">0.0005562</td>
+<td align="right">1</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:0097470" class="uri">GO:0097470</a></td>
+<td align="left">CC</td>
+<td align="left">ribbon synapse</td>
+<td align="right">11</td>
+<td align="right">3</td>
+<td align="right">0.0006711</td>
+<td align="right">1</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0010452" class="uri">GO:0010452</a></td>
+<td align="left">BP</td>
+<td align="left">histone H3-K36 methylation</td>
+<td align="right">14</td>
+<td align="right">3</td>
+<td align="right">0.0006845</td>
+<td align="right">1</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:0090023" class="uri">GO:0090023</a></td>
+<td align="left">BP</td>
+<td align="left">positive regulation of neutrophil chemotaxis</td>
+<td align="right">25</td>
+<td align="right">3</td>
+<td align="right">0.0010073</td>
+<td align="right">1</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0010793" class="uri">GO:0010793</a></td>
+<td align="left">BP</td>
+<td align="left">regulation of mRNA export from nucleus</td>
+<td align="right">5</td>
+<td align="right">2</td>
+<td align="right">0.0011003</td>
+<td align="right">1</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:0071624" class="uri">GO:0071624</a></td>
+<td align="left">BP</td>
+<td align="left">positive regulation of granulocyte chemotaxis</td>
+<td align="right">28</td>
+<td align="right">3</td>
+<td align="right">0.0011239</td>
+<td align="right">1</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0034481" class="uri">GO:0034481</a></td>
+<td align="left">MF</td>
+<td align="left">chondroitin sulfotransferase activity</td>
+<td align="right">4</td>
+<td align="right">2</td>
+<td align="right">0.0011489</td>
+<td align="right">1</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:2000197" class="uri">GO:2000197</a></td>
+<td align="left">BP</td>
+<td align="left">regulation of ribonucleoprotein complex localization</td>
+<td align="right">6</td>
+<td align="right">2</td>
+<td align="right">0.0013055</td>
+<td align="right">1</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:1903039" class="uri">GO:1903039</a></td>
+<td align="left">BP</td>
+<td align="left">positive regulation of leukocyte cell-cell adhesion</td>
+<td align="right">225</td>
+<td align="right">8</td>
+<td align="right">0.0013234</td>
+<td align="right">1</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:1902624" class="uri">GO:1902624</a></td>
+<td align="left">BP</td>
+<td align="left">positive regulation of neutrophil migration</td>
+<td align="right">27</td>
+<td align="right">3</td>
+<td align="right">0.0014916</td>
+<td align="right">1</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0043378" class="uri">GO:0043378</a></td>
+<td align="left">BP</td>
+<td align="left">positive regulation of CD8-positive, alpha-beta T cell differentiation</td>
+<td align="right">4</td>
+<td align="right">2</td>
+<td align="right">0.0014967</td>
+<td align="right">1</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:0022409" class="uri">GO:0022409</a></td>
+<td align="left">BP</td>
+<td align="left">positive regulation of cell-cell adhesion</td>
+<td align="right">269</td>
+<td align="right">9</td>
+<td align="right">0.0015263</td>
+<td align="right">1</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0042060" class="uri">GO:0042060</a></td>
+<td align="left">BP</td>
+<td align="left">wound healing</td>
+<td align="right">514</td>
+<td align="right">14</td>
+<td align="right">0.0016411</td>
+<td align="right">1</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="characteristics-of-probes-that-are-different-between-any-and-both" class="section level2">
+<h2>Characteristics of probes that are different between <em>“any”</em> and <em>“both”</em></h2>
+<pre class="r"><code>diff &lt;- c(rownames(pAny$coefEsts)[!rownames(pAny$coefEsts) %in% same],
+          rownames(pBoth$coefEsts)[!rownames(pBoth$coefEsts) %in% same])
+length(diff)</code></pre>
+<pre><code>[1] 358</code></pre>
+<p>The number of probes that is different using <em>any</em> and <em>both</em> is 358. This is 89.5% of the total number of cell type discriminating probes.</p>
+<pre class="r"><code>tmp &lt;- mValsNoXY[rownames(mValsNoXY) %in% diff,
+                 colnames(mValsNoXY) %in% sub$Sample_ID]
+tmpDiff &lt;- ann[match(rownames(tmp), ann$Name), -c(5:17,20,21,23,32:37)]
+
+topDiffFile &lt;- here(&quot;output/GO-Diff.csv&quot;)
+
+if(!file.exists(topDiffFile)){
+  gstDiff &lt;- gometh(sig.cpg = diff, 
+                   all.cpg = rownames(mValsNoXY), 
+                   anno = ann)
+  topDiff &lt;- topGSA(gstDiff, number = 50)
+  write.csv(topDiff, topDiffFile)
+  
+} else {
+  topDiff &lt;- read.csv(topDiffFile, row.names = 1)
+  
+}
+
+
+topGSA(topDiff) %&gt;% knitr::kable()</code></pre>
+<table>
+<colgroup>
+<col width="9%" />
+<col width="7%" />
+<col width="60%" />
+<col width="4%" />
+<col width="2%" />
+<col width="8%" />
+<col width="8%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">ONTOLOGY</th>
+<th align="left">TERM</th>
+<th align="right">N</th>
+<th align="right">DE</th>
+<th align="right">P.DE</th>
+<th align="right">FDR</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><a href="GO:0004674" class="uri">GO:0004674</a></td>
+<td align="left">MF</td>
+<td align="left">protein serine/threonine kinase activity</td>
+<td align="right">412</td>
+<td align="right">21</td>
+<td align="right">0.0000145</td>
+<td align="right">0.2751161</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0006955" class="uri">GO:0006955</a></td>
+<td align="left">BP</td>
+<td align="left">immune response</td>
+<td align="right">1912</td>
+<td align="right">41</td>
+<td align="right">0.0000243</td>
+<td align="right">0.2751161</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:0046328" class="uri">GO:0046328</a></td>
+<td align="left">BP</td>
+<td align="left">regulation of JNK cascade</td>
+<td align="right">177</td>
+<td align="right">12</td>
+<td align="right">0.0000507</td>
+<td align="right">0.2842184</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0018210" class="uri">GO:0018210</a></td>
+<td align="left">BP</td>
+<td align="left">peptidyl-threonine modification</td>
+<td align="right">123</td>
+<td align="right">10</td>
+<td align="right">0.0000672</td>
+<td align="right">0.2842184</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:0046330" class="uri">GO:0046330</a></td>
+<td align="left">BP</td>
+<td align="left">positive regulation of JNK cascade</td>
+<td align="right">131</td>
+<td align="right">10</td>
+<td align="right">0.0000751</td>
+<td align="right">0.2842184</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0043506" class="uri">GO:0043506</a></td>
+<td align="left">BP</td>
+<td align="left">regulation of JUN kinase activity</td>
+<td align="right">85</td>
+<td align="right">8</td>
+<td align="right">0.0000871</td>
+<td align="right">0.2842184</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:0046649" class="uri">GO:0046649</a></td>
+<td align="left">BP</td>
+<td align="left">lymphocyte activation</td>
+<td align="right">661</td>
+<td align="right">21</td>
+<td align="right">0.0001081</td>
+<td align="right">0.2842184</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0048584" class="uri">GO:0048584</a></td>
+<td align="left">BP</td>
+<td align="left">positive regulation of response to stimulus</td>
+<td align="right">2258</td>
+<td align="right">51</td>
+<td align="right">0.0001149</td>
+<td align="right">0.2842184</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:0045321" class="uri">GO:0045321</a></td>
+<td align="left">BP</td>
+<td align="left">leukocyte activation</td>
+<td align="right">1197</td>
+<td align="right">30</td>
+<td align="right">0.0001177</td>
+<td align="right">0.2842184</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0007254" class="uri">GO:0007254</a></td>
+<td align="left">BP</td>
+<td align="left">JNK cascade</td>
+<td align="right">201</td>
+<td align="right">12</td>
+<td align="right">0.0001341</td>
+<td align="right">0.2842184</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:0080135" class="uri">GO:0080135</a></td>
+<td align="left">BP</td>
+<td align="left">regulation of cellular response to stress</td>
+<td align="right">740</td>
+<td align="right">24</td>
+<td align="right">0.0001382</td>
+<td align="right">0.2842184</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0018107" class="uri">GO:0018107</a></td>
+<td align="left">BP</td>
+<td align="left">peptidyl-threonine phosphorylation</td>
+<td align="right">114</td>
+<td align="right">9</td>
+<td align="right">0.0001825</td>
+<td align="right">0.3088682</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:0032874" class="uri">GO:0032874</a></td>
+<td align="left">BP</td>
+<td align="left">positive regulation of stress-activated MAPK cascade</td>
+<td align="right">162</td>
+<td align="right">10</td>
+<td align="right">0.0002110</td>
+<td align="right">0.3088682</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0018209" class="uri">GO:0018209</a></td>
+<td align="left">BP</td>
+<td align="left">peptidyl-serine modification</td>
+<td align="right">316</td>
+<td align="right">15</td>
+<td align="right">0.0002165</td>
+<td align="right">0.3088682</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:0043507" class="uri">GO:0043507</a></td>
+<td align="left">BP</td>
+<td align="left">positive regulation of JUN kinase activity</td>
+<td align="right">70</td>
+<td align="right">7</td>
+<td align="right">0.0002184</td>
+<td align="right">0.3088682</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0034097" class="uri">GO:0034097</a></td>
+<td align="left">BP</td>
+<td align="left">response to cytokine</td>
+<td align="right">1166</td>
+<td align="right">28</td>
+<td align="right">0.0002292</td>
+<td align="right">0.3088682</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:0032872" class="uri">GO:0032872</a></td>
+<td align="left">BP</td>
+<td align="left">regulation of stress-activated MAPK cascade</td>
+<td align="right">226</td>
+<td align="right">12</td>
+<td align="right">0.0002321</td>
+<td align="right">0.3088682</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0070304" class="uri">GO:0070304</a></td>
+<td align="left">BP</td>
+<td align="left">positive regulation of stress-activated protein kinase signaling cascade</td>
+<td align="right">164</td>
+<td align="right">10</td>
+<td align="right">0.0002533</td>
+<td align="right">0.3151636</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="GO:0034351" class="uri">GO:0034351</a></td>
+<td align="left">BP</td>
+<td align="left">negative regulation of glial cell apoptotic process</td>
+<td align="right">7</td>
+<td align="right">3</td>
+<td align="right">0.0002750</td>
+<td align="right">0.3151636</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="GO:0070302" class="uri">GO:0070302</a></td>
+<td align="left">BP</td>
+<td align="left">regulation of stress-activated protein kinase signaling cascade</td>
+<td align="right">229</td>
+<td align="right">12</td>
+<td align="right">0.0002786</td>
+<td align="right">0.3151636</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="estimate-cell-type-proportions-of-raw-bal-samples" class="section level1">
+<h1>Estimate cell type proportions of raw BAL samples</h1>
+<div id="artificial-mixture" class="section level2">
+<h2>Artificial mixture</h2>
+<p>We will use blood immune cell mixtures with known cell type proportions published by Salas et al. 2018 to test the accuracy of cell type proportion estimates derived using our reference library.</p>
+<pre class="r"><code>hub &lt;- ExperimentHub()  </code></pre>
+<pre><code>snapshotDate(): 2020-10-27</code></pre>
+<pre class="r"><code>query(hub, &quot;FlowSorted.Blood.EPIC&quot;) </code></pre>
+<pre><code>ExperimentHub with 1 record
+# snapshotDate(): 2020-10-27
+# names(): EH1136
+# package(): FlowSorted.Blood.EPIC
+# $dataprovider: GEO
+# $species: Homo sapiens
+# $rdataclass: RGChannelSet
+# $rdatadateadded: 2018-04-20
+# $title: FlowSorted.Blood.EPIC: Illumina Human Methylation data from EPIC o...
+# $description: The FlowSorted.Blood.EPIC package contains Illumina HumanMet...
+# $taxonomyid: 9606
+# $genome: hg19
+# $sourcetype: tar.gz
+# $sourceurl: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE110554
+# $sourcesize: NA
+# $tags: c(&quot;ExperimentData&quot;, &quot;Homo_sapiens_Data&quot;, &quot;Tissue&quot;,
+#   &quot;MicroarrayData&quot;, &quot;Genome&quot;, &quot;TissueMicroarrayData&quot;,
+#   &quot;MethylationArrayData&quot;) 
+# retrieve record with &#39;object[[&quot;EH1136&quot;]]&#39; </code></pre>
+<pre class="r"><code>FlowSorted.Blood.EPIC &lt;- hub[[&quot;EH1136&quot;]]</code></pre>
+<pre><code>see ?FlowSorted.Blood.EPIC and browseVignettes(&#39;FlowSorted.Blood.EPIC&#39;) for documentation</code></pre>
+<pre><code>loading from cache</code></pre>
+<pre class="r"><code># separate the reference from the testing dataset  
+RGsetTargets &lt;- FlowSorted.Blood.EPIC[,FlowSorted.Blood.EPIC$CellType == &quot;MIX&quot;]
+mixReal &lt;- as.matrix(colData(RGsetTargets)[,12:17])/100</code></pre>
+<pre class="r"><code>mixDat &lt;- melt(mixReal)
+colnames(mixDat) &lt;- c(&quot;sample&quot;,&quot;cell&quot;,&quot;proportion&quot;)
+
+p &lt;- ggplot(mixDat, aes(sample)) + 
+  geom_bar(aes(fill = cell, weight=proportion)) +
+  scale_x_discrete(breaks = waiver(), labels=1:nrow(mixReal)) +
+  ggtitle(&quot;Artificially created cell mixtures&quot;) +
+  labs(y = &quot;Proportion&quot;, x = &quot;Mixture&quot;, fill = &quot;Cell type&quot;)
+p</code></pre>
+<p><img src="figure/estimateCellProportions.Rmd/unnamed-chunk-16-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-16-1">
+Past versions of unnamed-chunk-16-1.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-16-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/blob/a90dc68a9e8608ef7e5fe16f02059495870f6fd6/docs/figure/estimateCellProportions.Rmd/unnamed-chunk-16-1.png" target="_blank">a90dc68</a>
+</td>
+<td>
+Jovana Maksimovic
+</td>
+<td>
+2021-09-28
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/blob/10147c01aaa38682abaf4f3694d1ce55fc634e06/docs/figure/estimateCellProportions.Rmd/unnamed-chunk-16-1.png" target="_blank">10147c0</a>
+</td>
+<td>
+Jovana Maksimovic
+</td>
+<td>
+2021-09-27
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>We have not sorted our BAL lymphocytes into B cells, T cells and NK cells, so the “true” lymphocyte value we will compare to is the sum of the proportions of those cells in the artificial mixture.</p>
+<pre class="r"><code>mixSum &lt;- data.frame(mixReal[,5:6], Lymph = rowSums(mixReal[,1:4]))
+mixSumDat &lt;- melt(as.matrix(mixSum))
+colnames(mixSumDat) &lt;- c(&quot;sample&quot;,&quot;cell&quot;,&quot;proportion&quot;)
+
+p &lt;- ggplot(mixSumDat, aes(sample)) + 
+  geom_bar(aes(fill = cell, weight = proportion)) +
+    scale_x_discrete(breaks = waiver(), labels = 1:nrow(mixReal)) +
+    ggtitle(&quot;Artificially created cell mixtures&quot;) +
+  labs(y = &quot;Proportion&quot;, x = &quot;Mixture&quot;, fill = &quot;Cell type&quot;)
+p</code></pre>
+<p><img src="figure/estimateCellProportions.Rmd/unnamed-chunk-17-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-17-1">
+Past versions of unnamed-chunk-17-1.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-17-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/blob/10147c01aaa38682abaf4f3694d1ce55fc634e06/docs/figure/estimateCellProportions.Rmd/unnamed-chunk-17-1.png" target="_blank">10147c0</a>
 </td>
 <td>
 Jovana Maksimovic
@@ -1015,13 +2440,13 @@ p1 &lt;- ggplot(mixBoth, aes(x = sample, fill = cell)) +
   scale_x_discrete(breaks = waiver(), labels = 1:nrow(mixReal)) +
   scale_fill_manual(values = pal)
 p1</code></pre>
-<p><img src="figure/estimateCellProportions.Rmd/unnamed-chunk-10-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/estimateCellProportions.Rmd/unnamed-chunk-19-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>
-<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-10-1">
-Past versions of unnamed-chunk-10-1.png
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-19-1">
+Past versions of unnamed-chunk-19-1.png
 </button>
 </p>
-<div id="fig-unnamed-chunk-10-1" class="collapse">
+<div id="fig-unnamed-chunk-19-1" class="collapse">
 <div class="table-responsive">
 <table class="table table-condensed table-hover">
 <thead>
@@ -1040,7 +2465,7 @@ Date
 <tbody>
 <tr>
 <td>
-<a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/blob/10147c01aaa38682abaf4f3694d1ce55fc634e06/docs/figure/estimateCellProportions.Rmd/unnamed-chunk-10-1.png" target="_blank">10147c0</a>
+<a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/blob/10147c01aaa38682abaf4f3694d1ce55fc634e06/docs/figure/estimateCellProportions.Rmd/unnamed-chunk-19-1.png" target="_blank">10147c0</a>
 </td>
 <td>
 Jovana Maksimovic
@@ -1057,45 +2482,8 @@ Jovana Maksimovic
   plot_layout(guides = &quot;collect&quot;) &amp; 
   theme(legend.position = &quot;bottom&quot;,
         legend.box = &quot;vertical&quot;)</code></pre>
-<p><img src="figure/estimateCellProportions.Rmd/unnamed-chunk-11-1.png" width="672" style="display: block; margin: auto;" /></p>
-<p>
-<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-11-1">
-Past versions of unnamed-chunk-11-1.png
-</button>
-</p>
-<div id="fig-unnamed-chunk-11-1" class="collapse">
-<div class="table-responsive">
-<table class="table table-condensed table-hover">
-<thead>
-<tr>
-<th>
-Version
-</th>
-<th>
-Author
-</th>
-<th>
-Date
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/blob/10147c01aaa38682abaf4f3694d1ce55fc634e06/docs/figure/estimateCellProportions.Rmd/unnamed-chunk-11-1.png" target="_blank">10147c0</a>
-</td>
-<td>
-Jovana Maksimovic
-</td>
-<td>
-2021-09-27
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<p>Estimate cell type proportions in artificial mixture using <em>any</em> option.</p>
+<p><img src="figure/estimateCellProportions.Rmd/unnamed-chunk-20-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Estimate cell type proportions in artificial mixture using <em>“any”</em> option.</p>
 <pre class="r"><code>mixEstAny &lt;- estimateCellCounts2Mod(rgSet = RGsetTargets, 
                                  compositeCellType = &quot;Lavage&quot;,   
                                 processMethod = &quot;preprocessQuantile&quot;,  
@@ -1146,13 +2534,13 @@ p2 &lt;- ggplot(mixAny, aes(x = sample, fill = cell)) +
   scale_x_discrete(breaks = waiver(), labels = 1:nrow(mixReal)) +
   scale_fill_manual(values = pal)
 p2</code></pre>
-<p><img src="figure/estimateCellProportions.Rmd/unnamed-chunk-13-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/estimateCellProportions.Rmd/unnamed-chunk-22-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>
-<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-13-1">
-Past versions of unnamed-chunk-13-1.png
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-22-1">
+Past versions of unnamed-chunk-22-1.png
 </button>
 </p>
-<div id="fig-unnamed-chunk-13-1" class="collapse">
+<div id="fig-unnamed-chunk-22-1" class="collapse">
 <div class="table-responsive">
 <table class="table table-condensed table-hover">
 <thead>
@@ -1171,7 +2559,7 @@ Date
 <tbody>
 <tr>
 <td>
-<a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/blob/10147c01aaa38682abaf4f3694d1ce55fc634e06/docs/figure/estimateCellProportions.Rmd/unnamed-chunk-13-1.png" target="_blank">10147c0</a>
+<a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/blob/10147c01aaa38682abaf4f3694d1ce55fc634e06/docs/figure/estimateCellProportions.Rmd/unnamed-chunk-22-1.png" target="_blank">10147c0</a>
 </td>
 <td>
 Jovana Maksimovic
@@ -1188,13 +2576,13 @@ Jovana Maksimovic
   plot_layout(guides = &quot;collect&quot;) &amp; 
   theme(legend.position = &quot;bottom&quot;,
         legend.box = &quot;vertical&quot;)</code></pre>
-<p><img src="figure/estimateCellProportions.Rmd/unnamed-chunk-14-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/estimateCellProportions.Rmd/unnamed-chunk-23-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>
-<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-14-1">
-Past versions of unnamed-chunk-14-1.png
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-23-1">
+Past versions of unnamed-chunk-23-1.png
 </button>
 </p>
-<div id="fig-unnamed-chunk-14-1" class="collapse">
+<div id="fig-unnamed-chunk-23-1" class="collapse">
 <div class="table-responsive">
 <table class="table table-condensed table-hover">
 <thead>
@@ -1213,7 +2601,7 @@ Date
 <tbody>
 <tr>
 <td>
-<a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/blob/10147c01aaa38682abaf4f3694d1ce55fc634e06/docs/figure/estimateCellProportions.Rmd/unnamed-chunk-14-1.png" target="_blank">10147c0</a>
+<a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/blob/10147c01aaa38682abaf4f3694d1ce55fc634e06/docs/figure/estimateCellProportions.Rmd/unnamed-chunk-23-1.png" target="_blank">10147c0</a>
 </td>
 <td>
 Jovana Maksimovic
@@ -1226,11 +2614,11 @@ Jovana Maksimovic
 </table>
 </div>
 </div>
-<pre class="r"><code>mixSumDat$est &lt;- &quot;truth&quot;
+<pre class="r"><code>mixSumDat$est &lt;- &quot;Truth&quot;
 mixSumDat$num &lt;- rownames(mixSumDat)
-mixBoth$est &lt;- &quot;both&quot;
+mixBoth$est &lt;- &quot;Est. (both)&quot;
 mixBoth$num &lt;- rownames(mixBoth)
-mixAny$est &lt;- &quot;any&quot;
+mixAny$est &lt;- &quot;Est. (any)&quot;
 mixAny$num &lt;- rownames(mixAny)
 
 fullDat &lt;- rbind(mixSumDat, mixBoth, mixAny)
@@ -1241,21 +2629,22 @@ fullDat$cell &lt;- fct_recode(fullDat$cell,
 fullDat &lt;- fullDat[fullDat$cell != &quot;EpithelialCell&quot;,]
 fullDat$cell &lt;- fct_drop(fullDat$cell)
 
-p1 &lt;- ggplot(fullDat, aes(x = sample, y = proportion, fill = est)) + 
+p1a &lt;- ggplot(fullDat, aes(x = sample, y = proportion, fill = est)) + 
   geom_bar(stat = &quot;identity&quot;, position = &quot;dodge&quot;) +
   facet_grid(.~ cell, scales = &quot;free_x&quot;) +
   labs(x = &quot;Mixture&quot;, y = &quot;Proportion&quot;, fill = &quot;Source&quot;) + 
   scale_x_discrete(breaks = waiver(), labels = 1:nrow(mixReal)) +
-  theme(axis.text.x = element_text(size = 8))
+  theme_cowplot() +
+  theme(axis.text.x = element_text(size = 8)) 
 
-p1</code></pre>
-<p><img src="figure/estimateCellProportions.Rmd/unnamed-chunk-15-1.png" width="672" style="display: block; margin: auto;" /></p>
+p1a</code></pre>
+<p><img src="figure/estimateCellProportions.Rmd/unnamed-chunk-24-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>
-<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-15-1">
-Past versions of unnamed-chunk-15-1.png
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-24-1">
+Past versions of unnamed-chunk-24-1.png
 </button>
 </p>
-<div id="fig-unnamed-chunk-15-1" class="collapse">
+<div id="fig-unnamed-chunk-24-1" class="collapse">
 <div class="table-responsive">
 <table class="table table-condensed table-hover">
 <thead>
@@ -1274,106 +2663,18 @@ Date
 <tbody>
 <tr>
 <td>
-<a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/blob/10147c01aaa38682abaf4f3694d1ce55fc634e06/docs/figure/estimateCellProportions.Rmd/unnamed-chunk-15-1.png" target="_blank">10147c0</a>
+<a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/blob/215068501d56b6ac71bcab25e0a4cfc2141f4139/docs/figure/estimateCellProportions.Rmd/unnamed-chunk-24-1.png" target="_blank">2150685</a>
 </td>
 <td>
 Jovana Maksimovic
 </td>
 <td>
-2021-09-27
+2021-10-01
 </td>
 </tr>
-</tbody>
-</table>
-</div>
-</div>
-<p>We can see that the estimates of granulocyte and lymphocute proportions made using our BAL reference panel are highly correlated with the true proportions regardless of how the discrimination probe set is chosen. Although there is evidence of slight overestimation of granulocytes in some samples. For example, mixtures 1, 5, 7, 10, 11 and 12 are dominated by &gt;50% lymphocytes and in those samples the proportion of granulocytes is slightly overestimated. This discrepancy is likely due to the fact that the mixture samples contain only neutrophils whearas our refernce panel contains all granulocyte types. However, despite this shortcoming, the cell type proportion estimates are still very accurate. This suggests that our BAL reference panel, in combination with the Houseman algorithm, should be able to accurately estimate cell type proportions in our patient BAL samples.</p>
-<pre class="r"><code>dat1 &lt;- tibble(x = rowMeans(cbind(mixSum[,&quot;Neu&quot;], 
-                                 mixEstAny$counts[,&quot;Granulocyte&quot;])),
-              y = (mixSum[,&quot;Neu&quot;] - mixEstAny$counts[,&quot;Granulocyte&quot;]))
-c1 &lt;- cor.test(mixSum[,&#39;Neu&#39;], mixEstAny$counts[,&#39;Granulocyte&#39;])
-p1 &lt;- ggplot(dat1, aes(x = x, y = y)) +
-  geom_text(label = 1:nrow(mixSum), size = 3) +
-  geom_hline(yintercept = 0, linetype = &quot;dashed&quot;, colour = &quot;red&quot;) +
-  labs(x = &quot;Mean&quot;, y = &quot;Difference (Truth - Estimate)&quot;) +
-  coord_cartesian(ylim = c(-0.2, 0.2)) +
-  ggtitle(&quot;Granulocytes&quot;, subtitle = &quot;Probe selection: Any&quot;) +
-  annotate(&quot;text&quot;, x = 0.1, y = 0.15, hjust = 0, size = 3,
-           label = glue::glue(&quot;Pearson correlation = {round(c1$estimate, 4)}
-                               p-value = {signif(c1$p.value, 4)}&quot;))
-  
-
-dat2 &lt;- tibble(x = rowMeans(cbind(mixSum[,&quot;Lymph&quot;], 
-                                 mixEstAny$counts[,&quot;Lymphocyte&quot;])),
-              y = (mixSum[,&quot;Lymph&quot;] - mixEstAny$counts[,&quot;Lymphocyte&quot;]))
-c2 &lt;- cor.test(mixSum[,&#39;Lymph&#39;], mixEstAny$counts[,&#39;Lymphocyte&#39;])
-p2 &lt;- ggplot(dat2, aes(x = x, y = y)) +
-  geom_text(label = 1:nrow(mixSum), size = 3) +
-  geom_hline(yintercept = 0, linetype = &quot;dashed&quot;, colour = &quot;red&quot;) +
-  labs(x = &quot;Mean&quot;, y = &quot;Difference (Truth - Estimate)&quot;) +
-  coord_cartesian(ylim = c(-0.2, 0.2)) +
-  ggtitle(&quot;Lymphocytes&quot;, subtitle = &quot;Probe selection: Any&quot;) +
-  annotate(&quot;text&quot;, x = 0.1, y = 0.15, hjust = 0, size = 3,
-           label = glue::glue(&quot;Pearson correlation = {round(c2$estimate, 4)}
-                               p-value = {signif(c2$p.value, 4)}&quot;))
-
-dat3 &lt;- tibble(x = rowMeans(cbind(mixSum[,&quot;Neu&quot;], 
-                                 mixEstBoth$counts[,&quot;Granulocyte&quot;])),
-              y = (mixSum[,&quot;Neu&quot;] - mixEstBoth$counts[,&quot;Granulocyte&quot;]))
-c3 &lt;- cor.test(mixSum[,&#39;Neu&#39;], mixEstBoth$counts[,&#39;Granulocyte&#39;])
-p3 &lt;- ggplot(dat3, aes(x = x, y = y)) +
-  geom_text(label = 1:nrow(mixSum), size = 3) +
-  geom_hline(yintercept = 0, linetype = &quot;dashed&quot;, colour = &quot;red&quot;) +
-  labs(x = &quot;Mean&quot;, y = &quot;Difference (Truth - Estimate)&quot;) +
-  coord_cartesian(ylim = c(-0.2, 0.2)) +
-  ggtitle(&quot;Granulocytes&quot;, subtitle = &quot;Probe selection: Both&quot;) +
-  annotate(&quot;text&quot;, x = 0.1, y = 0.15, hjust = 0, size = 3,
-           label = glue::glue(&quot;Pearson correlation = {round(c3$estimate, 4)}
-                               p-value = {signif(c3$p.value, 4)}&quot;))
-
-dat4 &lt;- tibble(x = rowMeans(cbind(mixSum[,&quot;Lymph&quot;], 
-                                 mixEstBoth$counts[,&quot;Lymphocyte&quot;])),
-              y = (mixSum[,&quot;Lymph&quot;] - mixEstBoth$counts[,&quot;Lymphocyte&quot;]))
-c4 &lt;- cor.test(mixSum[,&#39;Lymph&#39;], mixEstBoth$counts[,&#39;Lymphocyte&#39;])
-p4 &lt;- ggplot(dat4, aes(x = x, y = y)) +
-  geom_text(label = 1:nrow(mixSum), size = 3) +
-  geom_hline(yintercept = 0, linetype = &quot;dashed&quot;, colour = &quot;red&quot;) +
-  labs(x = &quot;Mean&quot;, y = &quot;Difference (Truth - Estimate)&quot;) +
-  coord_cartesian(ylim = c(-0.2, 0.2)) +
-  ggtitle(&quot;Lymphocytes&quot;, subtitle = &quot;Probe selection: Both&quot;) +
-  annotate(&quot;text&quot;, x = 0.1, y = 0.15, hjust = 0, size = 3,
-           label = glue::glue(&quot;Pearson correlation = {round(c4$estimate, 4)}
-                               p-value = {signif(c4$p.value, 4)}&quot;))
-
-(wrap_elements(p1 | p2) / wrap_elements(p3 | p4)) + 
-  plot_annotation(tag_levels = &quot;A&quot;) &amp;
-    theme(plot.tag = element_text(face = &#39;bold&#39;, size = 16))</code></pre>
-<p><img src="figure/estimateCellProportions.Rmd/unnamed-chunk-16-1.png" width="672" style="display: block; margin: auto;" /></p>
-<p>
-<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-16-1">
-Past versions of unnamed-chunk-16-1.png
-</button>
-</p>
-<div id="fig-unnamed-chunk-16-1" class="collapse">
-<div class="table-responsive">
-<table class="table table-condensed table-hover">
-<thead>
-<tr>
-<th>
-Version
-</th>
-<th>
-Author
-</th>
-<th>
-Date
-</th>
-</tr>
-</thead>
-<tbody>
 <tr>
 <td>
-<a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/blob/a90dc68a9e8608ef7e5fe16f02059495870f6fd6/docs/figure/estimateCellProportions.Rmd/unnamed-chunk-16-1.png" target="_blank">a90dc68</a>
+<a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/blob/a90dc68a9e8608ef7e5fe16f02059495870f6fd6/docs/figure/estimateCellProportions.Rmd/unnamed-chunk-24-1.png" target="_blank">a90dc68</a>
 </td>
 <td>
 Jovana Maksimovic
@@ -1384,7 +2685,7 @@ Jovana Maksimovic
 </tr>
 <tr>
 <td>
-<a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/blob/10147c01aaa38682abaf4f3694d1ce55fc634e06/docs/figure/estimateCellProportions.Rmd/unnamed-chunk-16-1.png" target="_blank">10147c0</a>
+<a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/blob/10147c01aaa38682abaf4f3694d1ce55fc634e06/docs/figure/estimateCellProportions.Rmd/unnamed-chunk-24-1.png" target="_blank">10147c0</a>
 </td>
 <td>
 Jovana Maksimovic
@@ -1397,6 +2698,136 @@ Jovana Maksimovic
 </table>
 </div>
 </div>
+<p>We can see that the estimates of granulocyte and lymphocute proportions made using our BAL reference panel are highly correlated with the true proportions regardless of how the discrimination probe set is chosen. Although there is evidence of slight overestimation of granulocytes in some samples. This discrepancy is likely due to the fact that the mixture samples contain only neutrophils whereas our reference panel contains all granulocyte types. However, despite this shortcoming, the cell type proportion estimates are still very accurate. This suggests that our BAL reference panel, in combination with the Houseman algorithm, should be able to accurately estimate cell type proportions in our patient BAL samples.</p>
+<pre class="r"><code>dat1 &lt;- tibble(x = rowMeans(cbind(mixSum[,&quot;Neu&quot;], 
+                                 mixEstAny$counts[,&quot;Granulocyte&quot;])),
+              y = (mixSum[,&quot;Neu&quot;] - mixEstAny$counts[,&quot;Granulocyte&quot;])) %&gt;%
+  mutate(Mixture = factor(1:n()))
+c1 &lt;- cor.test(mixSum[,&#39;Neu&#39;], mixEstAny$counts[,&#39;Granulocyte&#39;])
+mse1 &lt;- signif(mean(dat1$y^2), 2)
+p1 &lt;- ggplot(dat1, aes(x = x, y = y)) +
+  geom_text(label = 1:nrow(mixSum), size = 2.5) +
+  #geom_point(aes(color = Mixture)) +
+  geom_hline(yintercept = 0, linetype = &quot;dashed&quot;, colour = &quot;red&quot;) +
+  labs(x = &quot;Mean&quot;, y = &quot;Difference (Truth - Estimate)&quot;) +
+  coord_cartesian(ylim = c(-0.2, 0.2)) +
+  ggtitle(&quot;Granulocytes&quot;, subtitle = &quot;Probe select = &#39;Any&#39;&quot;) +
+  theme_cowplot(font_size = 12) +
+  annotate(&quot;text&quot;, x = 0.1, y = 0.2, hjust = 0, size = 3,
+           label = glue::glue(&quot;MSE = {mse1}&quot;))
+           #label = glue::glue(&quot;Pearson correlation = {round(c1$estimate, 4)}
+           #                   p-value = {signif(c1$p.value, 4)}&quot;))
+
+dat2 &lt;- tibble(x = rowMeans(cbind(mixSum[,&quot;Lymph&quot;], 
+                                 mixEstAny$counts[,&quot;Lymphocyte&quot;])),
+              y = (mixSum[,&quot;Lymph&quot;] - mixEstAny$counts[,&quot;Lymphocyte&quot;])) %&gt;%
+  mutate(Mixture = factor(1:n()))
+c2 &lt;- cor.test(mixSum[,&#39;Lymph&#39;], mixEstAny$counts[,&#39;Lymphocyte&#39;])
+mse2 &lt;- signif(mean(dat2$y^2), 2)
+p2 &lt;- ggplot(dat2, aes(x = x, y = y)) +
+  geom_text(label = 1:nrow(mixSum), size = 2.5) +
+  #geom_point(aes(color = Mixture)) +
+  geom_hline(yintercept = 0, linetype = &quot;dashed&quot;, colour = &quot;red&quot;) +
+  labs(x = &quot;Mean&quot;, y = &quot;Difference (Truth - Estimate)&quot;) +
+  coord_cartesian(ylim = c(-0.2, 0.2)) +
+  ggtitle(&quot;Lymphocytes&quot;, subtitle = &quot;Probe select = &#39;Any&#39;&quot;) +
+  theme_cowplot(font_size = 12) +
+  annotate(&quot;text&quot;, x = 0.1, y = 0.2, hjust = 0, size = 3,
+           label = glue::glue(&quot;MSE = {mse2}&quot;))
+           #label = glue::glue(&quot;Pearson correlation = {round(c2$estimate, 4)}
+            #                   p-value = {signif(c2$p.value, 4)}&quot;))
+
+dat3 &lt;- tibble(x = rowMeans(cbind(mixSum[,&quot;Neu&quot;], 
+                                 mixEstBoth$counts[,&quot;Granulocyte&quot;])),
+              y = (mixSum[,&quot;Neu&quot;] - mixEstBoth$counts[,&quot;Granulocyte&quot;])) %&gt;%
+  mutate(Mixture = factor(1:n()))
+c3 &lt;- cor.test(mixSum[,&#39;Neu&#39;], mixEstBoth$counts[,&#39;Granulocyte&#39;])
+mse3 &lt;- signif(mean(dat3$y^2), 2)
+p3 &lt;- ggplot(dat3, aes(x = x, y = y)) +
+  geom_text(label = 1:nrow(mixSum), size = 2.5) +
+  #geom_point(aes(color = Mixture)) +
+  geom_hline(yintercept = 0, linetype = &quot;dashed&quot;, colour = &quot;red&quot;) +
+  labs(x = &quot;Mean&quot;, y = &quot;Difference (Truth - Estimate)&quot;) +
+  coord_cartesian(ylim = c(-0.2, 0.2)) +
+  ggtitle(&quot;Granulocytes&quot;, subtitle = &quot;Probe select = &#39;Both&#39;&quot;) +
+  theme_cowplot(font_size = 12) +
+  annotate(&quot;text&quot;, x = 0.1, y = 0.2, hjust = 0, size = 3,
+           label = glue::glue(&quot;MSE = {mse3}&quot;))
+           #label = glue::glue(&quot;Pearson correlation = {round(c3$estimate, 4)}
+            #                   p-value = {signif(c3$p.value, 4)}&quot;))
+
+dat4 &lt;- tibble(x = rowMeans(cbind(mixSum[,&quot;Lymph&quot;], 
+                                 mixEstBoth$counts[,&quot;Lymphocyte&quot;])),
+              y = (mixSum[,&quot;Lymph&quot;] - mixEstBoth$counts[,&quot;Lymphocyte&quot;])) %&gt;%
+  mutate(Mixture = factor(1:n()))
+c4 &lt;- cor.test(mixSum[,&#39;Lymph&#39;], mixEstBoth$counts[,&#39;Lymphocyte&#39;])
+mse4 &lt;- signif(mean(dat4$y^2),2)
+p4 &lt;- ggplot(dat4, aes(x = x, y = y)) +
+  geom_text(label = 1:nrow(mixSum), size = 2.5) +
+  #geom_point(aes(color = Mixture)) +
+  geom_hline(yintercept = 0, linetype = &quot;dashed&quot;, colour = &quot;red&quot;) +
+  labs(x = &quot;Mean&quot;, y = &quot;Difference (Truth - Estimate)&quot;) +
+  coord_cartesian(ylim = c(-0.2, 0.2)) +
+  ggtitle(&quot;Lymphocytes&quot;, subtitle = &quot;Probe select = &#39;Both&#39;&quot;) +
+  theme_cowplot(font_size = 12) +
+  annotate(&quot;text&quot;, x = 0.1, y = 0.2, hjust = 0, size = 3,
+           label = glue::glue(&quot;MSE = {mse4}&quot;))
+           #label = glue::glue(&quot;Pearson correlation = {round(c4$estimate, 4)}
+            #                   p-value = {signif(c4$p.value, 4)}&quot;))
+
+((p1 | p2) / (p3 | p4)) + 
+  plot_layout(guides = &quot;collect&quot;) +
+  plot_annotation(tag_levels = &quot;A&quot;) &amp;
+    theme(plot.tag = element_text(face = &#39;bold&#39;, size = 16),
+          legend.position = &quot;bottom&quot;)</code></pre>
+<p><img src="figure/estimateCellProportions.Rmd/unnamed-chunk-25-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-25-1">
+Past versions of unnamed-chunk-25-1.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-25-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/blob/215068501d56b6ac71bcab25e0a4cfc2141f4139/docs/figure/estimateCellProportions.Rmd/unnamed-chunk-25-1.png" target="_blank">2150685</a>
+</td>
+<td>
+Jovana Maksimovic
+</td>
+<td>
+2021-10-01
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="figure-4" class="section level3">
+<h3><strong>Figure 4</strong></h3>
+<pre class="r"><code>((p1a + scale_fill_brewer(palette = &quot;Set2&quot;) + 
+    theme(legend.position = &quot;bottom&quot;,
+              legend.text = element_text(size = 8),
+              legend.title = element_text(size = 9))) / 
+   (p1 | p2) / (p3 | p4)) + 
+  plot_annotation(tag_levels = &quot;A&quot;) &amp;
+    theme(plot.tag = element_text(face = &#39;bold&#39;, size = 16))</code></pre>
+<p><img src="figure/estimateCellProportions.Rmd/unnamed-chunk-26-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>If we look at MDS plots of the mixture data, as well as of the known cell type proportions, we can see that the primary source of variation is the proportion of neutrophils vs. lymphoctes. This overlaps with the the samples where we are seeing slight over estimation of granulocyte proportions.</p>
 <pre class="r"><code>mSetTargets &lt;- preprocessRaw(RGsetTargets)
 mValsTargets &lt;- getM(mSetTargets)
@@ -1416,43 +2847,7 @@ p2 &lt;- ggplot(dat, aes(x = x, y = y)) +
   labs(x = &quot;Principal Component 1&quot;, y = &quot;Principal Component 2&quot;)
 
 (p1 | p2)</code></pre>
-<p><img src="figure/estimateCellProportions.Rmd/unnamed-chunk-17-1.png" width="672" style="display: block; margin: auto;" /></p>
-<p>
-<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-17-1">
-Past versions of unnamed-chunk-17-1.png
-</button>
-</p>
-<div id="fig-unnamed-chunk-17-1" class="collapse">
-<div class="table-responsive">
-<table class="table table-condensed table-hover">
-<thead>
-<tr>
-<th>
-Version
-</th>
-<th>
-Author
-</th>
-<th>
-Date
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/blob/10147c01aaa38682abaf4f3694d1ce55fc634e06/docs/figure/estimateCellProportions.Rmd/unnamed-chunk-17-1.png" target="_blank">10147c0</a>
-</td>
-<td>
-Jovana Maksimovic
-</td>
-<td>
-2021-09-27
-</td>
-</tr>
-</tbody>
-</table>
-</div>
+<p><img src="figure/estimateCellProportions.Rmd/unnamed-chunk-27-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 </div>
 <div id="raw-bal-samples" class="section level2">
@@ -1493,45 +2888,8 @@ p1 &lt;- ggplot(estAny, aes(x = sample, fill = cell)) +
         legend.position = &quot;bottom&quot;) +
   scale_fill_manual(values = pal)
 p1</code></pre>
-<p><img src="figure/estimateCellProportions.Rmd/unnamed-chunk-19-1.png" width="672" style="display: block; margin: auto;" /></p>
-<p>
-<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-19-1">
-Past versions of unnamed-chunk-19-1.png
-</button>
-</p>
-<div id="fig-unnamed-chunk-19-1" class="collapse">
-<div class="table-responsive">
-<table class="table table-condensed table-hover">
-<thead>
-<tr>
-<th>
-Version
-</th>
-<th>
-Author
-</th>
-<th>
-Date
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/blob/10147c01aaa38682abaf4f3694d1ce55fc634e06/docs/figure/estimateCellProportions.Rmd/unnamed-chunk-19-1.png" target="_blank">10147c0</a>
-</td>
-<td>
-Jovana Maksimovic
-</td>
-<td>
-2021-09-27
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<p>Get estimates for proportion of each cell type using the <em>both</em> option.</p>
+<p><img src="figure/estimateCellProportions.Rmd/unnamed-chunk-29-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Get estimates for proportion of each cell type using the <em>“both”</em> option.</p>
 <pre class="r"><code>cellEstBoth &lt;- estimateCellCounts2Mod(rgSet = patientSamps, 
                                    compositeCellType = &quot;Lavage&quot;,   
                                    processMethod = &quot;preprocessQuantile&quot;,  
@@ -1564,44 +2922,7 @@ p2 &lt;- ggplot(estBoth, aes(x = sample, fill = cell)) +
         legend.position = &quot;bottom&quot;) +
   scale_fill_manual(values = pal)
 p2</code></pre>
-<p><img src="figure/estimateCellProportions.Rmd/unnamed-chunk-21-1.png" width="672" style="display: block; margin: auto;" /></p>
-<p>
-<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-21-1">
-Past versions of unnamed-chunk-21-1.png
-</button>
-</p>
-<div id="fig-unnamed-chunk-21-1" class="collapse">
-<div class="table-responsive">
-<table class="table table-condensed table-hover">
-<thead>
-<tr>
-<th>
-Version
-</th>
-<th>
-Author
-</th>
-<th>
-Date
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/blob/10147c01aaa38682abaf4f3694d1ce55fc634e06/docs/figure/estimateCellProportions.Rmd/unnamed-chunk-21-1.png" target="_blank">10147c0</a>
-</td>
-<td>
-Jovana Maksimovic
-</td>
-<td>
-2021-09-27
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
+<p><img src="figure/estimateCellProportions.Rmd/unnamed-chunk-31-1.png" width="672" style="display: block; margin: auto;" /></p>
 <pre class="r"><code>fullDat &lt;- rbind(estBoth, estAny)
 fullDat$est &lt;- rep(c(&quot;both&quot;,&quot;any&quot;), each = nrow(estAny))
 
@@ -1612,46 +2933,10 @@ p1 &lt;- ggplot(fullDat, aes(x = sample, y = proportion, fill = est)) +
   theme(axis.text.x = element_text(size = 8, angle = 90, hjust = 1, vjust = 0.5))
 
 p1</code></pre>
-<p><img src="figure/estimateCellProportions.Rmd/unnamed-chunk-22-1.png" width="672" style="display: block; margin: auto;" /></p>
-<p>
-<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-22-1">
-Past versions of unnamed-chunk-22-1.png
-</button>
-</p>
-<div id="fig-unnamed-chunk-22-1" class="collapse">
-<div class="table-responsive">
-<table class="table table-condensed table-hover">
-<thead>
-<tr>
-<th>
-Version
-</th>
-<th>
-Author
-</th>
-<th>
-Date
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/blob/10147c01aaa38682abaf4f3694d1ce55fc634e06/docs/figure/estimateCellProportions.Rmd/unnamed-chunk-22-1.png" target="_blank">10147c0</a>
-</td>
-<td>
-Jovana Maksimovic
-</td>
-<td>
-2021-09-27
-</td>
-</tr>
-</tbody>
-</table>
+<p><img src="figure/estimateCellProportions.Rmd/unnamed-chunk-32-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
-</div>
-<div id="compare-to-flow-cytometry-data" class="section level4">
-<h4>Compare to flow-cytometry data</h4>
+<div id="compare-to-flow-cytometry-data" class="section level2">
+<h2>Compare to flow-cytometry data</h2>
 <pre class="r"><code>samps &lt;- targets$Sample_source[targets$Sample_Group == &quot;Raw&quot;]
 melt(read.csv(here(&quot;data/Flow-Data-for-Reference-Panel-Scaled.csv&quot;),
               stringsAsFactors = FALSE)) %&gt;%
@@ -1697,302 +2982,253 @@ p2 &lt;- ggplot(dat, aes(x = rowMeans(cbind(value, both)),
   ggtitle(&quot;Probe selection: Both&quot;)
 
 p1 / p2 + plot_layout(guides = &quot;collect&quot;)</code></pre>
-<p><img src="figure/estimateCellProportions.Rmd/unnamed-chunk-23-1.png" width="672" style="display: block; margin: auto;" /></p>
-<p>
-<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-23-1">
-Past versions of unnamed-chunk-23-1.png
-</button>
-</p>
-<div id="fig-unnamed-chunk-23-1" class="collapse">
-<div class="table-responsive">
-<table class="table table-condensed table-hover">
-<thead>
-<tr>
-<th>
-Version
-</th>
-<th>
-Author
-</th>
-<th>
-Date
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/blob/10147c01aaa38682abaf4f3694d1ce55fc634e06/docs/figure/estimateCellProportions.Rmd/unnamed-chunk-23-1.png" target="_blank">10147c0</a>
-</td>
-<td>
-Jovana Maksimovic
-</td>
-<td>
-2021-09-27
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<pre class="r"><code>anyfitlm &lt;- vector(&quot;list&quot;, 6)
-i = 1
-for(s in unique(as.character(dat$sample))){
-  for(n in unique(dat$name)){
-    data &lt;- dat[dat$sample == s &amp; dat$name == n,]
-    anyfitlm[[i]] &lt;- data.frame(fit = predict(lm(any ~ value, data = data)),
-                      sample = s,
-                      name = n,
-                      cell = dat$cell[dat$sample == s &amp; dat$name == n])
-    
-    i = i + 1
-  }   
-}
-anyfitlm &lt;- bind_rows(anyfitlm)
-
-bothfitlm &lt;- vector(&quot;list&quot;, 6)
-i = 1
-for(s in unique(dat$sample)){
-  for(n in unique(dat$name)){
-    data &lt;- dat[dat$sample == s &amp; dat$name == n,]
-    bothfitlm[[i]] &lt;- data.frame(fit = predict(lm(both ~ value, data = data)),
-                      sample = s,
-                      name = n,
-                      cell = dat$cell[dat$sample == s &amp; dat$name == n])
-    i = i + 1
-  }   
-}
-bothfitlm &lt;- bind_rows(bothfitlm)
-
-fitDat &lt;- inner_join(dat, anyfitlm, 
-                     by = c(&quot;sample&quot;,&quot;name&quot;,&quot;cell&quot;)) %&gt;%
-  inner_join(bothfitlm,
-             by = c(&quot;sample&quot;,&quot;name&quot;,&quot;cell&quot;),
-             suffix = c(&quot;.any&quot;, &quot;.both&quot;))
-
-newPal &lt;- pal[-1]
+<p><img src="figure/estimateCellProportions.Rmd/unnamed-chunk-33-1.png" width="672" style="display: block; margin: auto;" /></p>
+<!-- ```{r, warning=FALSE, message=FALSE, fig.width=8, fig.height=13} -->
+<!-- anyfitlm <- vector("list", 6) -->
+<!-- i = 1 -->
+<!-- for(s in unique(as.character(dat$sample))){ -->
+<!--   for(n in unique(dat$name)){ -->
+<!--     data <- dat[dat$sample == s & dat$name == n,] -->
+<!--     anyfitlm[[i]] <- data.frame(fit = predict(lm(any ~ value, data = data)), -->
+<!--                       sample = s, -->
+<!--                       name = n, -->
+<!--                       cell = dat$cell[dat$sample == s & dat$name == n]) -->
+<!--     i = i + 1 -->
+<!--   }    -->
+<!-- } -->
+<!-- anyfitlm <- bind_rows(anyfitlm) -->
+<!-- bothfitlm <- vector("list", 6) -->
+<!-- i = 1 -->
+<!-- for(s in unique(dat$sample)){ -->
+<!--   for(n in unique(dat$name)){ -->
+<!--     data <- dat[dat$sample == s & dat$name == n,] -->
+<!--     bothfitlm[[i]] <- data.frame(fit = predict(lm(both ~ value, data = data)), -->
+<!--                       sample = s, -->
+<!--                       name = n, -->
+<!--                       cell = dat$cell[dat$sample == s & dat$name == n]) -->
+<!--     i = i + 1 -->
+<!--   }    -->
+<!-- } -->
+<!-- bothfitlm <- bind_rows(bothfitlm) -->
+<!-- fitDat <- inner_join(dat, anyfitlm,  -->
+<!--                      by = c("sample","name","cell")) %>% -->
+<!--   inner_join(bothfitlm, -->
+<!--              by = c("sample","name","cell"), -->
+<!--              suffix = c(".any", ".both")) -->
+<!-- newPal <- pal[-2] -->
+<!-- names(newPal) <- c("granulocytes","lymphocytes","macrophages","AEC") -->
+<!-- samps <- as.character(unique(fitDat$sample)) -->
+<!-- p1 <- vector("list", length(samps)) -->
+<!-- for(i in 1:length(samps)){ -->
+<!--   dat1 <- dplyr::filter(fitDat, sample == samps[i] & name == "original") -->
+<!--   c1 <- cor.test(dat1$any, dat1$value) -->
+<!--   p1[[i]] <- ggplot(dat1, aes(x = value, y = any)) + -->
+<!--     geom_point(aes(colour = cell), size = 3) + -->
+<!--     geom_line(aes(y = fit.any), colour = "darkgrey", linetype = "dashed") +  -->
+<!--     labs(x = "Flow cytometry measure", y = "DNAm estimate", -->
+<!--          colour = "Cell type") + -->
+<!--     coord_cartesian(ylim = c(0, 1), xlim = c(0, 1)) + -->
+<!--     ggtitle(samps[i]) + -->
+<!--     scale_color_manual(values = newPal) +  -->
+<!--     annotate("text", x = 0, y = 0.9, hjust = 0, size = 2.5, -->
+<!--              label = glue::glue("Cor (Pearson) = {round(c1$estimate, 4)} -->
+<!--                                p-value = {signif(c1$p.value, 4)}")) + -->
+<!--     theme(plot.title = element_text(size = 10), -->
+<!--           axis.title = element_text(size = 9), -->
+<!--           axis.text = element_text(size = 8)) -->
+<!-- } -->
+<!-- p2 <- vector("list", length(samps)) -->
+<!-- for(i in 1:length(samps)){ -->
+<!--   dat1 <- dplyr::filter(fitDat, sample == samps[i] & name == "scaled") -->
+<!--   c1 <- cor.test(dat1$any, dat1$value) -->
+<!--   p2[[i]] <- ggplot(dat1, aes(x = value, y = any)) + -->
+<!--     geom_point(aes(colour = cell), size = 3) + -->
+<!--     geom_line(aes(y = fit.any), colour = "darkgrey", linetype = "dashed") +  -->
+<!--     labs(x = "Flow cytometry measure", y = "DNAm estimate", -->
+<!--          colour = "Cell type") + -->
+<!--     coord_cartesian(ylim = c(0, 1), xlim = c(0, 1)) + -->
+<!--     ggtitle(samps[i]) + -->
+<!--     scale_color_manual(values = newPal) +  -->
+<!--     annotate("text", x = 0, y = 0.9, hjust = 0, size = 2.5, -->
+<!--              label = glue::glue("Cor (Pearson) = {round(c1$estimate, 4)} -->
+<!--                                p-value = {signif(c1$p.value, 4)}")) + -->
+<!--     theme(plot.title = element_text(size = 10), -->
+<!--           axis.title = element_text(size = 9), -->
+<!--           axis.text = element_text(size = 8)) -->
+<!-- } -->
+<!-- p3 <- vector("list", length(samps)) -->
+<!-- for(i in 1:length(samps)){ -->
+<!--   dat1 <- dplyr::filter(fitDat, sample == samps[i] & name == "original") -->
+<!--   c1 <- cor.test(dat1$both, dat1$value) -->
+<!--   p3[[i]] <- ggplot(dat1, aes(x = value, y = both)) + -->
+<!--     geom_point(aes(colour = cell), size = 3) + -->
+<!--     geom_line(aes(y = fit.both), colour = "darkgrey", linetype = "dashed") +  -->
+<!--     labs(x = "Flow cytometry measure", y = "DNAm estimate", -->
+<!--          colour = "Cell type") + -->
+<!--     coord_cartesian(ylim = c(0, 1), xlim = c(0, 1)) + -->
+<!--     ggtitle(samps[i]) + -->
+<!--     scale_color_manual(values = newPal) +  -->
+<!--     annotate("text", x = 0, y = 0.9, hjust = 0, size = 2.5, -->
+<!--              label = glue::glue("Cor (Pearson) = {round(c1$estimate, 4)} -->
+<!--                                p-value = {signif(c1$p.value, 4)}")) + -->
+<!--     theme(plot.title = element_text(size = 10), -->
+<!--           axis.title = element_text(size = 9), -->
+<!--           axis.text = element_text(size = 8)) -->
+<!-- } -->
+<!-- p4 <- vector("list", length(samps)) -->
+<!-- for(i in 1:length(samps)){ -->
+<!--   dat1 <- dplyr::filter(fitDat, sample == samps[i] & name == "scaled") -->
+<!--   c1 <- cor.test(dat1$both, dat1$value) -->
+<!--   p4[[i]] <- ggplot(dat1, aes(x = value, y = both)) + -->
+<!--     geom_point(aes(colour = cell), size = 3) + -->
+<!--     geom_line(aes(y = fit.both), colour = "darkgrey", linetype = "dashed") +  -->
+<!--     labs(x = "Flow cytometry measure", y = "DNAm estimate", -->
+<!--          colour = "Cell type") + -->
+<!--     coord_cartesian(ylim = c(0, 1), xlim = c(0, 1)) + -->
+<!--     ggtitle(samps[i]) + -->
+<!--     scale_color_manual(values = newPal) +  -->
+<!--     annotate("text", x = 0, y = 0.9, hjust = 0, size = 2.5, -->
+<!--              label = glue::glue("Cor (Pearson) = {round(c1$estimate, 4)} -->
+<!--                                p-value = {signif(c1$p.value, 4)}")) + -->
+<!--     theme(plot.title = element_text(size = 10), -->
+<!--           axis.title = element_text(size = 9), -->
+<!--           axis.text = element_text(size = 8)) -->
+<!-- } -->
+<!-- a <- wrap_plots(p1, ncol = 3, guides = "collect") + -->
+<!--   plot_annotation(title = "Probe selection: Any - Flow data: Original") &  -->
+<!--   theme(legend.position = "none", -->
+<!--           plot.title = element_text(size = 12)) -->
+<!-- b <- wrap_plots(p2, ncol = 3, guides = "collect") + -->
+<!--   plot_annotation(title = "Probe selection: Any - Flow data: Scaled") &  -->
+<!--   theme(legend.position = "bottom", -->
+<!--           plot.title = element_text(size = 12)) -->
+<!-- c <- wrap_plots(p3, ncol = 3, guides = "collect") + -->
+<!--   plot_annotation(title = "Probe selection: Both - Flow data: Original") &  -->
+<!--   theme(legend.position = "none", -->
+<!--           plot.title = element_text(size = 12)) -->
+<!-- d <- wrap_plots(p4, ncol = 3, guides = "collect") + -->
+<!--   plot_annotation(title = "Probe selection: Both - Flow data: Scaled") &  -->
+<!--   theme(legend.position = "bottom", -->
+<!--           plot.title = element_text(size = 12)) -->
+<!-- ab <- (wrap_elements(a) / wrap_elements(b)) +  -->
+<!--   plot_layout(guides = "collect") +  -->
+<!--   plot_annotation(tag_levels = "A") & -->
+<!--     theme(plot.tag = element_text(face = 'bold', size = 16)) -->
+<!-- cd <- (wrap_elements(c) / wrap_elements(d)) +  -->
+<!--   plot_layout(guides = "collect") +  -->
+<!--   plot_annotation(tag_levels = "A") & -->
+<!--     theme(plot.tag = element_text(face = 'bold', size = 16)) -->
+<!-- ab -->
+<!-- cd -->
+<!-- ``` -->
+<pre class="r"><code>newPal &lt;- pal[-2]
 names(newPal) &lt;- c(&quot;granulocytes&quot;,&quot;lymphocytes&quot;,&quot;macrophages&quot;,&quot;AEC&quot;)
-
-samps &lt;- as.character(unique(fitDat$sample))
-p1 &lt;- vector(&quot;list&quot;, length(samps))
-
-for(i in 1:length(samps)){
-  dat1 &lt;- dplyr::filter(fitDat, sample == samps[i] &amp; name == &quot;original&quot;)
-  c1 &lt;- cor.test(dat1$any, dat1$value)
-  p1[[i]] &lt;- ggplot(dat1, aes(x = value, y = any)) +
-    geom_point(aes(colour = cell), size = 3) +
-    geom_line(aes(y = fit.any), colour = &quot;darkgrey&quot;, linetype = &quot;dashed&quot;) + 
-    labs(x = &quot;Flow cytometry measure&quot;, y = &quot;DNAm estimate&quot;,
-         colour = &quot;Cell type&quot;) +
-    coord_cartesian(ylim = c(0, 1), xlim = c(0, 1)) +
-    ggtitle(samps[i]) +
-    scale_color_manual(values = newPal) + 
-    annotate(&quot;text&quot;, x = 0, y = 0.9, hjust = 0, size = 2.5,
-             label = glue::glue(&quot;Cor (Pearson) = {round(c1$estimate, 4)}
-                               p-value = {signif(c1$p.value, 4)}&quot;)) +
-    theme(plot.title = element_text(size = 10),
-          axis.title = element_text(size = 9),
-          axis.text = element_text(size = 8))
-  
-}
-
-p2 &lt;- vector(&quot;list&quot;, length(samps))
-
-for(i in 1:length(samps)){
-  dat1 &lt;- dplyr::filter(fitDat, sample == samps[i] &amp; name == &quot;scaled&quot;)
-  c1 &lt;- cor.test(dat1$any, dat1$value)
-  p2[[i]] &lt;- ggplot(dat1, aes(x = value, y = any)) +
-    geom_point(aes(colour = cell), size = 3) +
-    geom_line(aes(y = fit.any), colour = &quot;darkgrey&quot;, linetype = &quot;dashed&quot;) + 
-    labs(x = &quot;Flow cytometry measure&quot;, y = &quot;DNAm estimate&quot;,
-         colour = &quot;Cell type&quot;) +
-    coord_cartesian(ylim = c(0, 1), xlim = c(0, 1)) +
-    ggtitle(samps[i]) +
-    scale_color_manual(values = newPal) + 
-    annotate(&quot;text&quot;, x = 0, y = 0.9, hjust = 0, size = 2.5,
-             label = glue::glue(&quot;Cor (Pearson) = {round(c1$estimate, 4)}
-                               p-value = {signif(c1$p.value, 4)}&quot;)) +
-    theme(plot.title = element_text(size = 10),
-          axis.title = element_text(size = 9),
-          axis.text = element_text(size = 8))
-  
-}
-
-p3 &lt;- vector(&quot;list&quot;, length(samps))
-
-for(i in 1:length(samps)){
-  dat1 &lt;- dplyr::filter(fitDat, sample == samps[i] &amp; name == &quot;original&quot;)
-  c1 &lt;- cor.test(dat1$both, dat1$value)
-  p3[[i]] &lt;- ggplot(dat1, aes(x = value, y = both)) +
-    geom_point(aes(colour = cell), size = 3) +
-    geom_line(aes(y = fit.both), colour = &quot;darkgrey&quot;, linetype = &quot;dashed&quot;) + 
-    labs(x = &quot;Flow cytometry measure&quot;, y = &quot;DNAm estimate&quot;,
-         colour = &quot;Cell type&quot;) +
-    coord_cartesian(ylim = c(0, 1), xlim = c(0, 1)) +
-    ggtitle(samps[i]) +
-    scale_color_manual(values = newPal) + 
-    annotate(&quot;text&quot;, x = 0, y = 0.9, hjust = 0, size = 2.5,
-             label = glue::glue(&quot;Cor (Pearson) = {round(c1$estimate, 4)}
-                               p-value = {signif(c1$p.value, 4)}&quot;)) +
-    theme(plot.title = element_text(size = 10),
-          axis.title = element_text(size = 9),
-          axis.text = element_text(size = 8))
-  
-}
-
-p4 &lt;- vector(&quot;list&quot;, length(samps))
-
-for(i in 1:length(samps)){
-  dat1 &lt;- dplyr::filter(fitDat, sample == samps[i] &amp; name == &quot;scaled&quot;)
-  c1 &lt;- cor.test(dat1$both, dat1$value)
-  p4[[i]] &lt;- ggplot(dat1, aes(x = value, y = both)) +
-    geom_point(aes(colour = cell), size = 3) +
-    geom_line(aes(y = fit.both), colour = &quot;darkgrey&quot;, linetype = &quot;dashed&quot;) + 
-    labs(x = &quot;Flow cytometry measure&quot;, y = &quot;DNAm estimate&quot;,
-         colour = &quot;Cell type&quot;) +
-    coord_cartesian(ylim = c(0, 1), xlim = c(0, 1)) +
-    ggtitle(samps[i]) +
-    scale_color_manual(values = newPal) + 
-    annotate(&quot;text&quot;, x = 0, y = 0.9, hjust = 0, size = 2.5,
-             label = glue::glue(&quot;Cor (Pearson) = {round(c1$estimate, 4)}
-                               p-value = {signif(c1$p.value, 4)}&quot;)) +
-    theme(plot.title = element_text(size = 10),
-          axis.title = element_text(size = 9),
-          axis.text = element_text(size = 8))
-  
-}
-
-a &lt;- wrap_plots(p1, ncol = 3, guides = &quot;collect&quot;) +
-  plot_annotation(title = &quot;Probe selection: Any - Flow data: Original&quot;) &amp; 
-  theme(legend.position = &quot;none&quot;,
-          plot.title = element_text(size = 12))
-b &lt;- wrap_plots(p2, ncol = 3, guides = &quot;collect&quot;) +
-  plot_annotation(title = &quot;Probe selection: Any - Flow data: Scaled&quot;) &amp; 
-  theme(legend.position = &quot;bottom&quot;,
-          plot.title = element_text(size = 12))
-c &lt;- wrap_plots(p3, ncol = 3, guides = &quot;collect&quot;) +
-  plot_annotation(title = &quot;Probe selection: Both - Flow data: Original&quot;) &amp; 
-  theme(legend.position = &quot;none&quot;,
-          plot.title = element_text(size = 12))
-d &lt;- wrap_plots(p4, ncol = 3, guides = &quot;collect&quot;) +
-  plot_annotation(title = &quot;Probe selection: Both - Flow data: Scaled&quot;) &amp; 
-  theme(legend.position = &quot;bottom&quot;,
-          plot.title = element_text(size = 12))
-
-ab &lt;- (wrap_elements(a) / wrap_elements(b)) + 
-  plot_layout(guides = &quot;collect&quot;) + 
-  plot_annotation(tag_levels = &quot;A&quot;) &amp;
-    theme(plot.tag = element_text(face = &#39;bold&#39;, size = 16))
-
-cd &lt;- (wrap_elements(c) / wrap_elements(d)) + 
-  plot_layout(guides = &quot;collect&quot;) + 
-  plot_annotation(tag_levels = &quot;A&quot;) &amp;
-    theme(plot.tag = element_text(face = &#39;bold&#39;, size = 16))
-
-ab</code></pre>
-<p><img src="figure/estimateCellProportions.Rmd/unnamed-chunk-24-1.png" width="768" style="display: block; margin: auto;" /></p>
-<p>
-<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-24-1">
-Past versions of unnamed-chunk-24-1.png
-</button>
-</p>
-<div id="fig-unnamed-chunk-24-1" class="collapse">
-<div class="table-responsive">
-<table class="table table-condensed table-hover">
-<thead>
-<tr>
-<th>
-Version
-</th>
-<th>
-Author
-</th>
-<th>
-Date
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/blob/a90dc68a9e8608ef7e5fe16f02059495870f6fd6/docs/figure/estimateCellProportions.Rmd/unnamed-chunk-24-1.png" target="_blank">a90dc68</a>
-</td>
-<td>
-Jovana Maksimovic
-</td>
-<td>
-2021-09-28
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/blob/10147c01aaa38682abaf4f3694d1ce55fc634e06/docs/figure/estimateCellProportions.Rmd/unnamed-chunk-24-1.png" target="_blank">10147c0</a>
-</td>
-<td>
-Jovana Maksimovic
-</td>
-<td>
-2021-09-27
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<pre class="r"><code>cd</code></pre>
-<p><img src="figure/estimateCellProportions.Rmd/unnamed-chunk-24-2.png" width="768" style="display: block; margin: auto;" /></p>
-<pre class="r"><code>samps &lt;- as.character(unique(dat$sample))
+samps &lt;- as.character(unique(dat$sample))
 p &lt;- vector(&quot;list&quot;, length(samps))
 
 for(i in 1:length(samps)){
   dat1 &lt;- filter(dat, sample == samps[i])
+  dat1 %&gt;% filter(name == &quot;original&quot;) %&gt;% 
+    mutate(dsq = (value - any)^2) %&gt;% 
+    pull(dsq) %&gt;% mean() %&gt;% 
+    signif(2) -&gt; omse
+  dat1 %&gt;% filter(name == &quot;scaled&quot;) %&gt;% 
+    mutate(dsq = (value - any)^2) %&gt;% 
+    pull(dsq) %&gt;% mean() %&gt;% 
+    signif(2) -&gt; smse
   c1 &lt;- cor.test(dat1$any, dat1$value)
   p[[i]] &lt;- ggplot(dat1, aes(x = rowMeans(cbind(value, any)), 
                          y = value - any, colour = cell)) +
     geom_point(aes(shape = name)) +
+    scale_color_manual(values = newPal) +
     scale_shape_manual(values = c(1,4)) +
     geom_hline(yintercept = 0, linetype = &quot;dashed&quot;, colour = &quot;red&quot;) +
     labs(x = &quot;Mean&quot;, y = &quot;Difference (Flow - Meth. est.)&quot;,
          colour = &quot;Cell type&quot;, shape = &quot;Measure&quot;) +
     coord_cartesian(ylim = c(-0.5, 0.5), xlim = c(0, 1)) +
     ggtitle({samps[i]}) +
-    annotate(&quot;text&quot;, x = 0, y = 0.45, hjust = 0, size = 3,
-             label = glue::glue(&quot;Pearson correlation = {round(c1$estimate, 4)}
-                               p-value = {signif(c1$p.value, 4)}&quot;))
+    theme_cowplot(font_size = 10) +
+    annotate(&quot;text&quot;, x = 0, y = 0.40, hjust = 0, size = 2.5,
+             label = glue::glue(&quot;MSE (original) = {omse}
+                               MSE (scaled) = {smse}&quot;))
+             #label = glue::glue(&quot;Pearson correlation = {round(c1$estimate, 4)}
+              #                 p-value = {signif(c1$p.value, 4)}&quot;))
   
 }
 
 p1 &lt;- wrap_plots(p, ncol = 3, guides = &quot;collect&quot;) +
-  plot_annotation(title = &quot;Probe selection: Any&quot;) &amp; 
+  plot_annotation(title = &quot;Probe select = &#39;Any&#39;&quot;) &amp; 
   theme(legend.position = &quot;none&quot;)
 
 for(i in 1:length(samps)){
   dat1 &lt;- filter(dat, sample == samps[i])
+   dat1 %&gt;% filter(name == &quot;original&quot;) %&gt;% 
+    mutate(dsq = (value - both)^2) %&gt;% 
+    pull(dsq) %&gt;% mean() %&gt;% 
+    signif(2) -&gt; omse
+  dat1 %&gt;% filter(name == &quot;scaled&quot;) %&gt;% 
+    mutate(dsq = (value - both)^2) %&gt;% 
+    pull(dsq) %&gt;% mean() %&gt;% 
+    signif(2) -&gt; smse
   c1 &lt;- cor.test(dat1$both, dat1$value)
   p[[i]] &lt;- ggplot(dat1, aes(x = rowMeans(cbind(value, both)), 
                          y = value - both, colour = cell)) +
     geom_point(aes(shape = name)) +
     scale_shape_manual(values = c(1,4)) +
+    scale_color_manual(values = newPal) +
     geom_hline(yintercept = 0, linetype = &quot;dashed&quot;, colour = &quot;red&quot;) +
     labs(x = &quot;Mean&quot;, y = &quot;Difference (Flow - Meth. est.)&quot;,
          colour = &quot;Cell type&quot;, shape = &quot;Measure&quot;) +
     coord_cartesian(ylim = c(-0.5, 0.5), xlim = c(0, 1)) +
     ggtitle(samps[i]) +
-    annotate(&quot;text&quot;, x = 0, y = 0.45, hjust = 0, size = 3,
-             label = glue::glue(&quot;Pearson correlation = {round(c1$estimate, 4)}
-                               p-value = {signif(c1$p.value, 4)}&quot;))
+    theme_cowplot(font_size = 10) +
+    annotate(&quot;text&quot;, x = 0, y = 0.40, hjust = 0, size = 2.5,
+             label = glue::glue(&quot;MSE (original) = {omse}
+                               MSE (scaled) = {smse}&quot;))
+             #label = glue::glue(&quot;Pearson correlation = {round(c1$estimate, 4)}
+              #                 p-value = {signif(c1$p.value, 4)}&quot;))
   
 }
 
 p2 &lt;- wrap_plots(p, ncol = 3, guides = &quot;collect&quot;) +
-  plot_annotation(title = &quot;Probe selection: Both&quot;) &amp; 
+  plot_annotation(title = &quot;Probe select = &#39;Both&#39;&quot;) &amp; 
   theme(legend.position = &quot;bottom&quot;, legend.box = &quot;vertical&quot;)
 
 (wrap_elements(p1) / wrap_elements(p2)) + 
   plot_layout(guides = &quot;collect&quot;) + 
   plot_annotation(tag_levels = &quot;A&quot;) &amp;
     theme(plot.tag = element_text(face = &#39;bold&#39;, size = 16))</code></pre>
-<p><img src="figure/estimateCellProportions.Rmd/unnamed-chunk-25-1.png" width="768" style="display: block; margin: auto;" /></p>
+<p><img src="figure/estimateCellProportions.Rmd/unnamed-chunk-34-1.png" width="768" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+<div id="figure-5" class="section level1">
+<h1><strong>Figure 5</strong></h1>
+<pre class="r"><code>dat %&gt;% select(cell, sample, value, name) %&gt;%
+  bind_rows(dat %&gt;% select(cell, sample, both) %&gt;% 
+              rename(value = both) %&gt;%
+              mutate(name = &quot;both&quot;)) %&gt;%
+  bind_rows(dat %&gt;% select(cell, sample, any) %&gt;% 
+              rename(value = any) %&gt;%
+              mutate(name = &quot;any&quot;)) -&gt; longDat
+
+p1a &lt;- ggplot(longDat, aes(x = sample, y = value, fill = name)) + 
+  geom_bar(stat = &quot;identity&quot;, position = &quot;dodge&quot;) +
+  facet_grid(.~ cell, scales = &quot;free_x&quot;) +
+  labs(x = &quot;Cell type&quot;, y = &quot;Proportion&quot;, fill = &quot;Source&quot;) + 
+  theme_cowplot() 
+
+((p1a + scale_fill_brewer(palette = &quot;Set2&quot;) + 
+    theme(legend.position = &quot;bottom&quot;,
+              legend.text = element_text(size = 8),
+              legend.title = element_text(size = 9),
+          axis.text = element_text(size = 8),
+          axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
+          axis.title = element_text(size = 10))) / 
+   wrap_elements(p1) / wrap_elements(p2)) + 
+  plot_layout(heights = c(1,2,2)) +
+  plot_annotation(tag_levels = &quot;A&quot;) &amp;
+    theme(plot.tag = element_text(face = &#39;bold&#39;, size = 16))</code></pre>
+<p><img src="figure/estimateCellProportions.Rmd/unnamed-chunk-35-1.png" width="672" style="display: block; margin: auto;" /></p>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -2023,113 +3259,115 @@ attached base packages:
 
 other attached packages:
  [1] RColorBrewer_1.1-2                                 
- [2] patchwork_1.1.1                                    
- [3] forcats_0.5.1                                      
- [4] stringr_1.4.0                                      
- [5] dplyr_1.0.4                                        
- [6] purrr_0.3.4                                        
- [7] readr_1.4.0                                        
- [8] tidyr_1.1.2                                        
- [9] tibble_3.1.2                                       
-[10] tidyverse_1.3.0                                    
-[11] reshape2_1.4.4                                     
-[12] ggplot2_3.3.5                                      
-[13] FlowSorted.Blood.EPIC_1.8.0                        
-[14] ExperimentHub_1.16.0                               
-[15] AnnotationHub_2.22.0                               
-[16] BiocFileCache_1.14.0                               
-[17] dbplyr_2.1.0                                       
-[18] nlme_3.1-152                                       
-[19] quadprog_1.5-8                                     
-[20] genefilter_1.72.1                                  
-[21] IlluminaHumanMethylationEPICmanifest_0.3.0         
-[22] IlluminaHumanMethylationEPICanno.ilm10b4.hg19_0.6.0
-[23] minfi_1.36.0                                       
-[24] bumphunter_1.32.0                                  
-[25] locfit_1.5-9.4                                     
-[26] iterators_1.0.13                                   
-[27] foreach_1.5.1                                      
-[28] Biostrings_2.58.0                                  
-[29] XVector_0.30.0                                     
-[30] SummarizedExperiment_1.20.0                        
-[31] Biobase_2.50.0                                     
-[32] MatrixGenerics_1.2.1                               
-[33] matrixStats_0.59.0                                 
-[34] GenomicRanges_1.42.0                               
-[35] GenomeInfoDb_1.26.7                                
-[36] IRanges_2.24.1                                     
-[37] S4Vectors_0.28.1                                   
-[38] BiocGenerics_0.36.1                                
-[39] limma_3.46.0                                       
-[40] glue_1.4.2                                         
-[41] here_1.0.1                                         
-[42] workflowr_1.6.2                                    
+ [2] cowplot_1.1.1                                      
+ [3] missMethyl_1.24.0                                  
+ [4] IlluminaHumanMethylation450kanno.ilmn12.hg19_0.6.0 
+ [5] patchwork_1.1.1                                    
+ [6] forcats_0.5.1                                      
+ [7] stringr_1.4.0                                      
+ [8] dplyr_1.0.4                                        
+ [9] purrr_0.3.4                                        
+[10] readr_1.4.0                                        
+[11] tidyr_1.1.2                                        
+[12] tibble_3.1.2                                       
+[13] tidyverse_1.3.0                                    
+[14] reshape2_1.4.4                                     
+[15] ggplot2_3.3.5                                      
+[16] FlowSorted.Blood.EPIC_1.8.0                        
+[17] ExperimentHub_1.16.0                               
+[18] AnnotationHub_2.22.0                               
+[19] BiocFileCache_1.14.0                               
+[20] dbplyr_2.1.0                                       
+[21] nlme_3.1-152                                       
+[22] quadprog_1.5-8                                     
+[23] genefilter_1.72.1                                  
+[24] IlluminaHumanMethylationEPICmanifest_0.3.0         
+[25] IlluminaHumanMethylationEPICanno.ilm10b4.hg19_0.6.0
+[26] minfi_1.36.0                                       
+[27] bumphunter_1.32.0                                  
+[28] locfit_1.5-9.4                                     
+[29] iterators_1.0.13                                   
+[30] foreach_1.5.1                                      
+[31] Biostrings_2.58.0                                  
+[32] XVector_0.30.0                                     
+[33] SummarizedExperiment_1.20.0                        
+[34] Biobase_2.50.0                                     
+[35] MatrixGenerics_1.2.1                               
+[36] matrixStats_0.59.0                                 
+[37] GenomicRanges_1.42.0                               
+[38] GenomeInfoDb_1.26.7                                
+[39] IRanges_2.24.1                                     
+[40] S4Vectors_0.28.1                                   
+[41] BiocGenerics_0.36.1                                
+[42] limma_3.46.0                                       
+[43] glue_1.4.2                                         
+[44] here_1.0.1                                         
+[45] workflowr_1.6.2                                    
 
 loaded via a namespace (and not attached):
-  [1] readxl_1.3.1                  backports_1.2.1              
-  [3] NMF_0.23.0                    plyr_1.8.6                   
-  [5] splines_4.0.2                 BiocParallel_1.24.1          
-  [7] gridBase_0.4-7                digest_0.6.27                
-  [9] htmltools_0.5.1.1             fansi_0.5.0                  
- [11] magrittr_2.0.1                memoise_2.0.0.9000           
- [13] doParallel_1.0.16             cluster_2.1.0                
- [15] annotate_1.68.0               modelr_0.1.8                 
- [17] askpass_1.1                   siggenes_1.64.0              
- [19] prettyunits_1.1.1             colorspace_2.0-2             
- [21] rvest_0.3.6                   blob_1.2.1                   
- [23] rappdirs_0.3.3                haven_2.3.1                  
- [25] xfun_0.23                     jsonlite_1.7.2               
- [27] crayon_1.4.1                  RCurl_1.98-1.3               
- [29] GEOquery_2.58.0               survival_3.2-7               
- [31] registry_0.5-1                gtable_0.3.0                 
- [33] zlibbioc_1.36.0               DelayedArray_0.16.3          
- [35] Rhdf5lib_1.12.1               HDF5Array_1.18.1             
- [37] scales_1.1.1                  DBI_1.1.1                    
- [39] rngtools_1.5                  Rcpp_1.0.6                   
- [41] xtable_1.8-4                  progress_1.2.2               
- [43] bit_4.0.4                     mclust_5.4.7                 
- [45] preprocessCore_1.52.1         httr_1.4.2                   
- [47] ellipsis_0.3.2                farver_2.1.0                 
- [49] pkgconfig_2.0.3               reshape_0.8.8                
- [51] XML_3.99-0.5                  utf8_1.2.1                   
- [53] labeling_0.4.2                tidyselect_1.1.0             
- [55] rlang_0.4.11                  later_1.1.0.1                
- [57] AnnotationDbi_1.52.0          cellranger_1.1.0             
- [59] munsell_0.5.0                 BiocVersion_3.12.0           
- [61] tools_4.0.2                   cachem_1.0.4                 
- [63] cli_3.0.0                     generics_0.1.0               
- [65] RSQLite_2.2.5                 broom_0.7.4                  
- [67] evaluate_0.14                 fastmap_1.1.0                
- [69] yaml_2.2.1                    knitr_1.31                   
- [71] bit64_4.0.5                   fs_1.5.0                     
- [73] beanplot_1.2                  scrime_1.3.5                 
- [75] doRNG_1.8.2                   sparseMatrixStats_1.2.0      
- [77] whisker_0.4                   mime_0.10                    
- [79] nor1mix_1.3-0                 xml2_1.3.2                   
- [81] biomaRt_2.46.3                rstudioapi_0.13              
- [83] compiler_4.0.2                curl_4.3                     
- [85] interactiveDisplayBase_1.28.0 reprex_1.0.0                 
- [87] stringi_1.5.3                 highr_0.8                    
- [89] GenomicFeatures_1.42.1        lattice_0.20-41              
- [91] Matrix_1.3-2                  multtest_2.46.0              
- [93] vctrs_0.3.8                   pillar_1.6.1                 
- [95] lifecycle_1.0.0               rhdf5filters_1.2.0           
- [97] BiocManager_1.30.10           data.table_1.13.6            
- [99] bitops_1.0-7                  httpuv_1.5.5                 
-[101] rtracklayer_1.50.0            R6_2.5.0                     
-[103] promises_1.2.0.1              codetools_0.2-18             
-[105] MASS_7.3-53.1                 assertthat_0.2.1             
-[107] rhdf5_2.34.0                  pkgmaker_0.32.2              
-[109] openssl_1.4.3                 rprojroot_2.0.2              
-[111] withr_2.4.2                   GenomicAlignments_1.26.0     
-[113] Rsamtools_2.6.0               GenomeInfoDbData_1.2.4       
-[115] hms_1.0.0                     grid_4.0.2                   
-[117] base64_2.0                    rmarkdown_2.6                
-[119] DelayedMatrixStats_1.12.3     illuminaio_0.32.0            
-[121] git2r_0.28.0                  lubridate_1.7.9.2            
-[123] shiny_1.6.0                  </code></pre>
-</div>
-</div>
+  [1] utf8_1.2.1                    tidyselect_1.1.0             
+  [3] RSQLite_2.2.5                 AnnotationDbi_1.52.0         
+  [5] grid_4.0.2                    BiocParallel_1.24.1          
+  [7] munsell_0.5.0                 codetools_0.2-18             
+  [9] preprocessCore_1.52.1         statmod_1.4.35               
+ [11] withr_2.4.2                   colorspace_2.0-2             
+ [13] highr_0.8                     knitr_1.31                   
+ [15] rstudioapi_0.13               NMF_0.23.0                   
+ [17] labeling_0.4.2                git2r_0.28.0                 
+ [19] GenomeInfoDbData_1.2.4        bit64_4.0.5                  
+ [21] farver_2.1.0                  rhdf5_2.34.0                 
+ [23] rprojroot_2.0.2               vctrs_0.3.8                  
+ [25] generics_0.1.0                xfun_0.23                    
+ [27] R6_2.5.0                      doParallel_1.0.16            
+ [29] illuminaio_0.32.0             bitops_1.0-7                 
+ [31] rhdf5filters_1.2.0            cachem_1.0.4                 
+ [33] reshape_0.8.8                 DelayedArray_0.16.3          
+ [35] assertthat_0.2.1              promises_1.2.0.1             
+ [37] scales_1.1.1                  gtable_0.3.0                 
+ [39] rlang_0.4.11                  splines_4.0.2                
+ [41] rtracklayer_1.50.0            GEOquery_2.58.0              
+ [43] broom_0.7.4                   BiocManager_1.30.10          
+ [45] yaml_2.2.1                    modelr_0.1.8                 
+ [47] GenomicFeatures_1.42.1        backports_1.2.1              
+ [49] httpuv_1.5.5                  tools_4.0.2                  
+ [51] gridBase_0.4-7                nor1mix_1.3-0                
+ [53] ellipsis_0.3.2                siggenes_1.64.0              
+ [55] Rcpp_1.0.6                    plyr_1.8.6                   
+ [57] sparseMatrixStats_1.2.0       progress_1.2.2               
+ [59] zlibbioc_1.36.0               RCurl_1.98-1.3               
+ [61] prettyunits_1.1.1             openssl_1.4.3                
+ [63] haven_2.3.1                   cluster_2.1.0                
+ [65] fs_1.5.0                      magrittr_2.0.1               
+ [67] data.table_1.13.6             reprex_1.0.0                 
+ [69] whisker_0.4                   hms_1.0.0                    
+ [71] mime_0.10                     evaluate_0.14                
+ [73] xtable_1.8-4                  XML_3.99-0.5                 
+ [75] mclust_5.4.7                  readxl_1.3.1                 
+ [77] compiler_4.0.2                biomaRt_2.46.3               
+ [79] crayon_1.4.1                  htmltools_0.5.1.1            
+ [81] later_1.1.0.1                 lubridate_1.7.9.2            
+ [83] DBI_1.1.1                     MASS_7.3-53.1                
+ [85] rappdirs_0.3.3                Matrix_1.3-2                 
+ [87] cli_3.0.0                     pkgconfig_2.0.3              
+ [89] registry_0.5-1                GenomicAlignments_1.26.0     
+ [91] xml2_1.3.2                    annotate_1.68.0              
+ [93] rngtools_1.5                  pkgmaker_0.32.2              
+ [95] multtest_2.46.0               beanplot_1.2                 
+ [97] rvest_0.3.6                   doRNG_1.8.2                  
+ [99] scrime_1.3.5                  digest_0.6.27                
+[101] rmarkdown_2.6                 base64_2.0                   
+[103] cellranger_1.1.0              DelayedMatrixStats_1.12.3    
+[105] curl_4.3                      shiny_1.6.0                  
+[107] Rsamtools_2.6.0               lifecycle_1.0.0              
+[109] jsonlite_1.7.2                Rhdf5lib_1.12.1              
+[111] askpass_1.1                   fansi_0.5.0                  
+[113] pillar_1.6.1                  lattice_0.20-41              
+[115] fastmap_1.1.0                 httr_1.4.2                   
+[117] survival_3.2-7                interactiveDisplayBase_1.28.0
+[119] BiocVersion_3.12.0            bit_4.0.4                    
+[121] stringi_1.5.3                 HDF5Array_1.18.1             
+[123] blob_1.2.1                    org.Hs.eg.db_3.12.0          
+[125] memoise_2.0.0.9000           </code></pre>
 </div>
 </div>
 
