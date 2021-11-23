@@ -67,7 +67,7 @@ read.metharray.sheet(dataDirectory,
   mutate_if(is.character, stringr::str_replace_all, pattern = "New", 
             replacement = "GenomeScan") %>%
   dplyr::select(Sample_ID, Sample_Group, Sample_source, Sample_run, 
-                Basename) -> targets
+                Basename, Num_individuals) -> targets
 
 targets %>% dplyr::select(-Basename) %>% knitr::kable()
 ```
@@ -259,6 +259,8 @@ dim(mValsNoXY)
 
 After filtering, sorted cell types still cluster tightly together. The mixed samples are centered between the sorted cell types, which is indicative of the mixtures.
 
+### **Supplementary Figure 5**
+
 ```{r, fig.asp=1}
 mDat <- mValsNoXY
 mds <- plotMDS(mDat, top = 1000, gene.selection="common", plot = FALSE)
@@ -308,6 +310,25 @@ Calculate the percentage of variance explained by principal components.
 PCs <- prcomp(t(mValsNoXY), scale = TRUE)
 summary(PCs)
 ```
+### **Supplementary Figure 2**
+
+```{r}
+summary(PCs)$importance %>% 
+  t() %>%
+  data.frame() %>%
+  rownames_to_column(var = "PC") %>%
+  slice_head(n = 10) %>%
+  ggplot(aes(x = forcats::fct_reorder(PC, 1:10), 
+             y = Proportion.of.Variance * 100,
+             group = 1)) +
+  geom_point(size = 4) +
+  geom_line() +
+  labs(y = "% Variance explained",
+       x = "Principal component") +
+  cowplot::theme_cowplot()
+```
+
+### **Figure 2**
 
 ```{r, fig.width=9, fig.height=5}
 dims <- list(c(1,2), c(1,3), c(2,3))
@@ -335,6 +356,68 @@ for(i in 1:length(p)){
 
 (p[[1]] | p[[2]] | p[[3]]) + plot_layout(guides = "collect") &
   theme(legend.position = "bottom")
+```
+
+## Assess raw BAL for presence of additional cell types
+
+If the 4 sorted cell types are fully representative of raw BAL, then fully methylated/unmethylated loci across all the sorted cell types should also be fully methylated/unmethylated in raw BAL. We identified 3479 probes with mean beta values either greater than 0.95 or less than 0.05 across all the sorted cell types. These probes are consistently fully methylated or fully unmethylated across both the sorted cell types and the raw BAL samples, confirming that the raw BAL is unlikely to contain additional nucleated cell types. 
+
+### **Supplementary Figure 4**
+
+```{r, fig.asp=1}
+cellTypes <- unique(targets$Sample_Group)[-5]
+tmp <- bValsNoXY[, targets$Sample_Group %in% cellTypes]
+keep <- which(rowMeans(tmp) >= 0.95 | rowMeans(tmp) <= 0.05)
+o <- order(targets$Sample_Group)
+
+NMF::aheatmap(bValsNoXY[keep, o],
+         annCol = list(SampleType = as.character(targets$Sample_Group[o])), 
+         labCol = NA, labRow = NA, annColors = list(pal),
+         Colv = NA)
+```
+
+## Pooling strategy assessment
+
+We assessed the impact of our pooling strategy on the methylomes of the sorted cell types by examining the variance of pools with different numbers of contributing donors. If the variance of beta values (or M values) in the methylomes derived from pools with fewer donors is not greater than the variance of methylomes of pools from a higher number of donors, then our pooling strategy is unlikely to be significantly biasing the methylation data. 
+Thus, we examined the relationship between the number of individuals contributing to a pooled sample and the variance across CpGs in the sample. The result indicates that there is no statistically significant relationship between the number of individuals contributing to a pool and its variance across CpGs. 
+
+### **Supplementary Figure 1**
+
+```{r}
+data.frame(poolVars = colVars(mValsNoXY)) %>%
+  mutate(cellType = targets$Sample_Group,
+         num = targets$Num_individuals) %>%
+  dplyr::filter(cellType != "Raw" ) %>%
+  mutate(cellType = forcats::fct_drop(cellType)) -> dat
+
+f <- lm(poolVars ~ num, data = dat)
+s <- summary(f)
+
+df <- data.frame(label = as.character(glue::glue("Adj. R^2 = {signif(s$adj.r.squared, 4)}\n
+                         Intercept = {signif(f$coef[[1]], 4)}\n
+                         Slope = {signif(f$coef[[2]], 4)}\n
+                         P-value = {signif(s$coef[2, 4], 4)}")),
+                 x = 9,
+                 y = 6.75,
+                 hjust = 0,
+                 vjust = 1,
+                 col = "black")
+
+ggplot(dat, aes(x = num, y = poolVars, color = cellType)) +
+  geom_point() +
+  geom_abline(slope = coef(f)[[2]], intercept = coef(f)[[1]],
+              linetype = "dashed", colour = "red") +
+  scale_color_manual(values = pal[-2]) +
+  scale_x_continuous(breaks = 1:nrow(dat)) +
+  cowplot::theme_cowplot(font_size = 12) +
+  labs(x = "No. contributing individuals", 
+       y = "Variance across CpGs", 
+       color = "Sample type") +
+  ggtext::geom_richtext(data = df, inherit.aes = FALSE,
+                        aes(x, y, label = label, hjust = hjust, 
+                            vjust = vjust),
+                        fill = NA, label.color = NA, 
+                        size = 3, color = "black")
 ```
 
 # Save processed data
