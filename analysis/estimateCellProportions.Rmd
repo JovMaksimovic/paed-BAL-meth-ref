@@ -488,7 +488,7 @@ p1 <- ggplot(dat1, aes(x = x, y = y)) +
   labs(x = "Mean", y = "Difference (Truth - Estimate)") +
   coord_cartesian(ylim = c(-0.2, 0.2)) +
   ggtitle("Granulocytes", subtitle = "Probe select = 'Any'") +
-  theme_cowplot(font_size = 12) +
+  theme_cowplot(font_size = 10) +
   annotate("text", x = 0.1, y = 0.2, hjust = 0, size = 3,
            label = glue::glue("MSE = {mse1}"))
            #label = glue::glue("Pearson correlation = {round(c1$estimate, 4)}
@@ -507,7 +507,7 @@ p2 <- ggplot(dat2, aes(x = x, y = y)) +
   labs(x = "Mean", y = "Difference (Truth - Estimate)") +
   coord_cartesian(ylim = c(-0.2, 0.2)) +
   ggtitle("Lymphocytes", subtitle = "Probe select = 'Any'") +
-  theme_cowplot(font_size = 12) +
+  theme_cowplot(font_size = 10) +
   annotate("text", x = 0.1, y = 0.2, hjust = 0, size = 3,
            label = glue::glue("MSE = {mse2}"))
            #label = glue::glue("Pearson correlation = {round(c2$estimate, 4)}
@@ -526,7 +526,7 @@ p3 <- ggplot(dat3, aes(x = x, y = y)) +
   labs(x = "Mean", y = "Difference (Truth - Estimate)") +
   coord_cartesian(ylim = c(-0.2, 0.2)) +
   ggtitle("Granulocytes", subtitle = "Probe select = 'Both'") +
-  theme_cowplot(font_size = 12) +
+  theme_cowplot(font_size = 10) +
   annotate("text", x = 0.1, y = 0.2, hjust = 0, size = 3,
            label = glue::glue("MSE = {mse3}"))
            #label = glue::glue("Pearson correlation = {round(c3$estimate, 4)}
@@ -545,7 +545,7 @@ p4 <- ggplot(dat4, aes(x = x, y = y)) +
   labs(x = "Mean", y = "Difference (Truth - Estimate)") +
   coord_cartesian(ylim = c(-0.2, 0.2)) +
   ggtitle("Lymphocytes", subtitle = "Probe select = 'Both'") +
-  theme_cowplot(font_size = 12) +
+  theme_cowplot(font_size = 10) +
   annotate("text", x = 0.1, y = 0.2, hjust = 0, size = 3,
            label = glue::glue("MSE = {mse4}"))
            #label = glue::glue("Pearson correlation = {round(c4$estimate, 4)}
@@ -562,11 +562,12 @@ p4 <- ggplot(dat4, aes(x = x, y = y)) +
 ```{r, fig.asp=1.5}
 ((p1a + scale_fill_brewer(palette = "Set2") + 
     theme(legend.position = "bottom",
-              legend.text = element_text(size = 8),
-              legend.title = element_text(size = 9))) / 
-   (p1 | p2) / (p3 | p4)) + 
-  plot_annotation(tag_levels = "A") &
-    theme(plot.tag = element_text(face = 'bold', size = 16))
+          legend.text = element_text(size = 8),
+          legend.title = element_text(size = 9))) / 
+   (wrap_elements(p1 | p2) / wrap_elements(p3 | p4)) + 
+   plot_layout(heights = c(1,2)) +
+   plot_annotation(tag_levels = "A") &
+   theme(plot.tag = element_text(face = 'bold', size = 16)))
 ```
 
 If we look at MDS plots of the mixture data, as well as of the known cell type proportions, we can see that the primary source of variation is the proportion of neutrophils vs. lymphoctes. This overlaps with the the samples where we are seeing slight over estimation of granulocyte proportions.
@@ -915,7 +916,7 @@ for(i in 1:length(samps)){
          colour = "Cell type", shape = "Measure") +
     coord_cartesian(ylim = c(-0.5, 0.5), xlim = c(0, 1)) +
     ggtitle({samps[i]}) +
-    theme_cowplot(font_size = 10) +
+    theme_cowplot(font_size = 8) +
     annotate("text", x = 0, y = 0.40, hjust = 0, size = 2.5,
              label = glue::glue("MSE (original) = {omse}
                                MSE (scaled) = {smse}"))
@@ -949,7 +950,7 @@ for(i in 1:length(samps)){
          colour = "Cell type", shape = "Measure") +
     coord_cartesian(ylim = c(-0.5, 0.5), xlim = c(0, 1)) +
     ggtitle(samps[i]) +
-    theme_cowplot(font_size = 10) +
+    theme_cowplot(font_size = 8) +
     annotate("text", x = 0, y = 0.40, hjust = 0, size = 2.5,
              label = glue::glue("MSE (original) = {omse}
                                MSE (scaled) = {smse}"))
