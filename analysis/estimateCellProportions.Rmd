@@ -196,7 +196,7 @@ if(!file.exists(topBothFile)){
   
 }
 
-topGSA(topBoth) %>% knitr::kable()
+topBoth %>% knitr::kable()
 ```
 
 ```{r, fig.asp=1}
@@ -283,7 +283,7 @@ if(!file.exists(topSameFile)){
 }
 
 
-topGSA(topSame) %>% knitr::kable()
+topSame %>% knitr::kable()
 ```
 
 ## Characteristics of probes that are different between *"any"* and *"both"*
@@ -318,7 +318,7 @@ if(!file.exists(topDiffFile)){
 }
 
 
-topGSA(topDiff) %>% knitr::kable()
+topDiff %>% knitr::kable()
 ```
 
 # Estimate cell type proportions of raw BAL samples
