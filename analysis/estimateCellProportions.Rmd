@@ -969,7 +969,7 @@ p2 <- wrap_plots(p, ncol = 3, guides = "collect") +
     theme(plot.tag = element_text(face = 'bold', size = 16))
 ```
 
-# **Figure 5** 
+### **Figure 5** 
 
 ```{r, fig.asp=2}
 dat %>% select(cell, sample, value, name) %>%

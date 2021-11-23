@@ -74,7 +74,7 @@ targets %>% dplyr::select(-Basename) %>% knitr::kable()
 
 Read in the raw methylation data.
 
-```{r}
+```{r, message=FALSE, warning=FALSE}
 # read in the raw data from the IDAT files
 rgSet <- read.metharray.exp(targets = targets)
 rgSet
