@@ -510,16 +510,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsatlassianpetermacorgaubitbucketscmospaedbalmethreftree4675ddecc968872d00b256d6956fe401768b3e1dtargetblank4675ddea"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/tree/4675ddecc968872d00b256d6956fe401768b3e1d" target="_blank">4675dde</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsatlassianpetermacorgaubitbucketscmospaedbalmethreftree518733924511f2e4b17686fb1665ad3e1af08ec0targetblank5187339a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/tree/518733924511f2e4b17686fb1665ad3e1af08ec0" target="_blank">5187339</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsatlassianpetermacorgaubitbucketscmospaedbalmethreftree4675ddecc968872d00b256d6956fe401768b3e1dtargetblank4675ddea" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsatlassianpetermacorgaubitbucketscmospaedbalmethreftree518733924511f2e4b17686fb1665ad3e1af08ec0targetblank5187339a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/tree/4675ddecc968872d00b256d6956fe401768b3e1d" target="_blank">4675dde</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/tree/518733924511f2e4b17686fb1665ad3e1af08ec0" target="_blank">5187339</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -528,15 +528,10 @@ Note that you need to be careful to ensure that all relevant files for the analy
 Ignored files:
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
-    Ignored:    analysis/figure/
     Ignored:    code/deident.R
     Ignored:    code/geoprep.R
     Ignored:    data/idat/
     Ignored:    data/processedData.RData
-    Ignored:    output/GO-Any.csv
-    Ignored:    output/GO-Both.csv
-    Ignored:    output/GO-Diff.csv
-    Ignored:    output/GO-Same.csv
     Ignored:    output/intensities.csv
     Ignored:    output/processed.csv
 
@@ -581,6 +576,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/blob/518733924511f2e4b17686fb1665ad3e1af08ec0/analysis/dataPreprocess.Rmd" target="_blank">5187339</a>
+</td>
+<td>
+Jovana Maksimovic
+</td>
+<td>
+2021-11-23
+</td>
+<td>
+wflow_publish(c(“analysis/dataPreprocess.Rmd”, “analysis/estimateCellProportions.Rmd”))
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/blob/595213632402baae4dd01fb6901e33a779e617f8/docs/dataPreprocess.html" target="_blank">5952136</a>
+</td>
+<td>
+Jovana Maksimovic
+</td>
+<td>
+2021-11-23
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -938,87 +967,8 @@ read.metharray.sheet(dataDirectory,
 </table>
 <p>Read in the raw methylation data.</p>
 <pre class="r"><code># read in the raw data from the IDAT files
-rgSet &lt;- read.metharray.exp(targets = targets)</code></pre>
-<pre><code>Warning in readChar(con, nchars = n): truncating string with embedded nuls
-
-Warning in readChar(con, nchars = n): truncating string with embedded nuls
-
-Warning in readChar(con, nchars = n): truncating string with embedded nuls
-
-Warning in readChar(con, nchars = n): truncating string with embedded nuls
-
-Warning in readChar(con, nchars = n): truncating string with embedded nuls
-
-Warning in readChar(con, nchars = n): truncating string with embedded nuls
-
-Warning in readChar(con, nchars = n): truncating string with embedded nuls
-
-Warning in readChar(con, nchars = n): truncating string with embedded nuls
-
-Warning in readChar(con, nchars = n): truncating string with embedded nuls
-
-Warning in readChar(con, nchars = n): truncating string with embedded nuls
-
-Warning in readChar(con, nchars = n): truncating string with embedded nuls
-
-Warning in readChar(con, nchars = n): truncating string with embedded nuls
-
-Warning in readChar(con, nchars = n): truncating string with embedded nuls
-
-Warning in readChar(con, nchars = n): truncating string with embedded nuls
-
-Warning in readChar(con, nchars = n): truncating string with embedded nuls
-
-Warning in readChar(con, nchars = n): truncating string with embedded nuls
-
-Warning in readChar(con, nchars = n): truncating string with embedded nuls
-
-Warning in readChar(con, nchars = n): truncating string with embedded nuls
-
-Warning in readChar(con, nchars = n): truncating string with embedded nuls
-
-Warning in readChar(con, nchars = n): truncating string with embedded nuls
-
-Warning in readChar(con, nchars = n): truncating string with embedded nuls
-
-Warning in readChar(con, nchars = n): truncating string with embedded nuls
-
-Warning in readChar(con, nchars = n): truncating string with embedded nuls
-
-Warning in readChar(con, nchars = n): truncating string with embedded nuls
-
-Warning in readChar(con, nchars = n): truncating string with embedded nuls
-
-Warning in readChar(con, nchars = n): truncating string with embedded nuls
-
-Warning in readChar(con, nchars = n): truncating string with embedded nuls
-
-Warning in readChar(con, nchars = n): truncating string with embedded nuls
-
-Warning in readChar(con, nchars = n): truncating string with embedded nuls
-
-Warning in readChar(con, nchars = n): truncating string with embedded nuls
-
-Warning in readChar(con, nchars = n): truncating string with embedded nuls
-
-Warning in readChar(con, nchars = n): truncating string with embedded nuls
-
-Warning in readChar(con, nchars = n): truncating string with embedded nuls
-
-Warning in readChar(con, nchars = n): truncating string with embedded nuls
-
-Warning in readChar(con, nchars = n): truncating string with embedded nuls
-
-Warning in readChar(con, nchars = n): truncating string with embedded nuls
-
-Warning in readChar(con, nchars = n): truncating string with embedded nuls
-
-Warning in readChar(con, nchars = n): truncating string with embedded nuls
-
-Warning in readChar(con, nchars = n): truncating string with embedded nuls
-
-Warning in readChar(con, nchars = n): truncating string with embedded nuls</code></pre>
-<pre class="r"><code>rgSet</code></pre>
+rgSet &lt;- read.metharray.exp(targets = targets)
+rgSet</code></pre>
 <pre><code>class: RGChannelSet 
 dim: 1051815 20 
 metadata(0):
@@ -1767,6 +1717,17 @@ Date
 <tbody>
 <tr>
 <td>
+<a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/blob/595213632402baae4dd01fb6901e33a779e617f8/docs/figure/dataPreprocess.Rmd/unnamed-chunk-20-1.png" target="_blank">5952136</a>
+</td>
+<td>
+Jovana Maksimovic
+</td>
+<td>
+2021-11-23
+</td>
+</tr>
+<tr>
+<td>
 <a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/blob/a90dc68a9e8608ef7e5fe16f02059495870f6fd6/docs/figure/dataPreprocess.Rmd/unnamed-chunk-20-1.png" target="_blank">a90dc68</a>
 </td>
 <td>
@@ -1820,6 +1781,43 @@ for(i in 1:length(p)){
 (p[[1]] | p[[2]] | p[[3]]) + plot_layout(guides = &quot;collect&quot;) &amp;
   theme(legend.position = &quot;bottom&quot;)</code></pre>
 <p><img src="figure/dataPreprocess.Rmd/unnamed-chunk-21-1.png" width="864" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-21-1">
+Past versions of unnamed-chunk-21-1.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-21-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/blob/595213632402baae4dd01fb6901e33a779e617f8/docs/figure/dataPreprocess.Rmd/unnamed-chunk-21-1.png" target="_blank">5952136</a>
+</td>
+<td>
+Jovana Maksimovic
+</td>
+<td>
+2021-11-23
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 </div>
 <div id="assess-raw-bal-for-presence-of-additional-cell-types" class="section level2">
@@ -1837,6 +1835,43 @@ NMF::aheatmap(bValsNoXY[keep, o],
          labCol = NA, labRow = NA, annColors = list(pal),
          Colv = NA)</code></pre>
 <p><img src="figure/dataPreprocess.Rmd/unnamed-chunk-22-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-22-1">
+Past versions of unnamed-chunk-22-1.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-22-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/blob/595213632402baae4dd01fb6901e33a779e617f8/docs/figure/dataPreprocess.Rmd/unnamed-chunk-22-1.png" target="_blank">5952136</a>
+</td>
+<td>
+Jovana Maksimovic
+</td>
+<td>
+2021-11-23
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 </div>
 <div id="pooling-strategy-assessment" class="section level2">
@@ -1879,6 +1914,43 @@ ggplot(dat, aes(x = num, y = poolVars, color = cellType)) +
                         fill = NA, label.color = NA, 
                         size = 3, color = &quot;black&quot;)</code></pre>
 <p><img src="figure/dataPreprocess.Rmd/unnamed-chunk-23-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-23-1">
+Past versions of unnamed-chunk-23-1.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-23-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://atlassian.petermac.org.au/bitbucket/scm/os/paed-bal-meth-ref/blob/595213632402baae4dd01fb6901e33a779e617f8/docs/figure/dataPreprocess.Rmd/unnamed-chunk-23-1.png" target="_blank">5952136</a>
+</td>
+<td>
+Jovana Maksimovic
+</td>
+<td>
+2021-11-23
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 </div>
 </div>
